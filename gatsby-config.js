@@ -4,7 +4,33 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `סופיה ציאדה`,
+    // Default title of the page
+    siteTitleAlt: `סופיה ציאדה`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `סופיה ציאדה`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `http://localhost:8000`,
+    // Used for SEO
+    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `he`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@sophie_sa`,
+    // Links displayed in the header on the right side
+    externalLinks: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/sophie_sa`
+      },
+      {
+        name: `Instagram`,
+        url: `https://www.instagram.com/sophie.sa/`
+      }
+    ],
     navigation: [
       {
         title: `Blog`,
@@ -14,12 +40,28 @@ module.exports = {
         title: `About`,
         slug: `/about`
       }
-    ]
+    ],
+    tagsPath: "/tags",
+    basePath: "/",
+    blogPath: "/blog",
+    tagsPath: "/tags",
+    postsPath: "content/posts",
+    pagesPath: "content/pages",
+    mdx: true,
+    showLineNumbers: true
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        remarkPlugins: [require("remark-math"), require("remark-html-katex")]
+      }
+    },
+    {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      options: {}
+      options: {
+        mdx: false
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -62,7 +104,11 @@ module.exports = {
           {
             family: `Assistant`,
             subsets: [`hebrew`, `latin`],
-            variants: [`400`, `800`]
+            variants: [`400`, `600`]
+          },
+          {
+            family: `Secular One`,
+            subsets: [`hebrew`, `latin`]
           }
         ]
       }
