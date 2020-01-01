@@ -23,21 +23,17 @@ module.exports = {
     // Links displayed in the header on the right side
     externalLinks: [
       {
-        name: `Twitter`,
-        url: `https://twitter.com/sophie_sa`
-      },
-      {
-        name: `Instagram`,
-        url: `https://www.instagram.com/sophie.sa/`
+        name: `GitHub`,
+        url: `https://github.com/SophiaSaiada/`
       }
     ],
     navigation: [
       {
-        title: `Blog`,
+        title: `פוסטים`,
         slug: `/blog`
       },
       {
-        title: `About`,
+        title: `קצת עליי`,
         slug: `/about`
       }
     ],
