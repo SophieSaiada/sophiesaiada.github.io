@@ -55,5 +55,17 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
- ]
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Assistant`,
+            subsets: [`hebrew`, `latin`],
+            variants: [`400`, `800`]
+          }
+        ]
+      }
+    }
+  ]
 };
