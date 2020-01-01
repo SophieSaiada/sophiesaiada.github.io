@@ -20,8 +20,15 @@ export default {
       ...style.colors.modes,
       dark: {
         ...style.colors.modes.dark,
-        primary: tailwind.colors.pink[6],
+        primary: tailwind.colors.pink[6]
       }
+    }
+  },
+  styles: {
+    ...style.styles,
+    li: {
+      ...style.styles.p,
+      pr: 3
     }
   }
 };
