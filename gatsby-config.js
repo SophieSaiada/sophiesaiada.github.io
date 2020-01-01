@@ -1,6 +1,6 @@
 require(`dotenv`).config({
-  path: `.env`,
-})
+  path: `.env`
+});
 
 module.exports = {
   siteMetadata: {
@@ -8,24 +8,24 @@ module.exports = {
     navigation: [
       {
         title: `Blog`,
-        slug: `/blog`,
+        slug: `/blog`
       },
       {
         title: `About`,
-        slug: `/about`,
-      },
-    ],
+        slug: `/about`
+      }
+    ]
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      options: {},
+      options: {}
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
+      }
     },
     `gatsby-plugin-sitemap`,
     {
@@ -42,18 +42,18 @@ module.exports = {
           {
             src: `/android-chrome-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
             src: `/android-chrome-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
+            type: `image/png`
+          }
+        ]
+      }
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
-  ],
-}
+ ]
+};
