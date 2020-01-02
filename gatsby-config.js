@@ -2,6 +2,9 @@ require(`dotenv`).config({
   path: `.env`
 });
 
+const pagesPath = `${__dirname}/content/pages`;
+const postsPath = `${__dirname}/content/posts`;
+
 module.exports = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
@@ -40,22 +43,43 @@ module.exports = {
     basePath: "/",
     blogPath: "/blog",
     tagsPath: "/tags",
-    postsPath: "content/posts",
-    pagesPath: "content/pages",
-    mdx: true,
+    pagesPath,
+    postsPath,
     showLineNumbers: true
   },
   plugins: [
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        remarkPlugins: [require("remark-math"), require("remark-html-katex")]
+        remarkPlugins: [require("remark-math"), require("remark-html-katex")],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false
+            }
+          }
+        ],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
       }
     },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
-        mdx: false
+        mdx: false,
+        pagesPath,
+        postsPath
       }
     },
     {

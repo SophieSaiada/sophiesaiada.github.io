@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { Link } from "gatsby"
-import Layout from "./layout"
+import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
 import Hero from "@lekoarts/gatsby-theme-minimal-blog/src/texts/hero"
 import Bottom from "@lekoarts/gatsby-theme-minimal-blog/src/texts/bottom"
 import Title from "@lekoarts/gatsby-theme-minimal-blog/src/components/title"
