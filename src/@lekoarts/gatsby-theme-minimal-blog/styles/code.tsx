@@ -2,7 +2,8 @@ import style from "@lekoarts/gatsby-theme-minimal-blog/src/styles/code";
 export default {
   ...style,
   ".math": {
-    direction: "ltr"
+    direction: "ltr",
+    fontSize: [1, 1, 2]
   },
   ".math-inline": {
     display: "inline-block"

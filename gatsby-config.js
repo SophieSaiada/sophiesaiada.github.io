@@ -19,12 +19,12 @@ module.exports = {
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@sophie_sa`,
+    author: `@SophiaSa`,
     // Links displayed in the header on the right side
     externalLinks: [
       {
         name: `GitHub`,
-        url: `https://github.com/SophiaSaiada/`
+        url: `https://github.com/SophiaSa/`
       }
     ],
     navigation: [
@@ -37,7 +37,6 @@ module.exports = {
         slug: `/about`
       }
     ],
-    tagsPath: "/tags",
     basePath: "/",
     blogPath: "/blog",
     tagsPath: "/tags",
