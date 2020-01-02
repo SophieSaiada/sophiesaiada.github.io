@@ -58,17 +58,7 @@ module.exports = {
             options: {
               maxWidth: 960,
               quality: 90,
-              linkImagesToOriginal: false
-            }
-          }
-        ],
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 960,
-              quality: 90,
-              linkImagesToOriginal: false
+              linkImagesToOriginal: true
             }
           }
         ]
