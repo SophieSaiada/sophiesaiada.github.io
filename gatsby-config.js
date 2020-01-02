@@ -105,6 +105,10 @@ module.exports = {
           {
             family: `Secular One`,
             subsets: [`hebrew`, `latin`]
+          },
+          {
+            family: `Fira Code`,
+            subsets: [`latin-ext`, `latin`]
           }
         ]
       }
