@@ -1,0 +1,37 @@
+.preview-image-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.1),
+    0px 7px 10px 1px rgba(0, 0, 0, 0.07), 0px 2px 16px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+}
+
+.preview-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.preview-image-container::after {
+  content: "לחצו לצפייה בתמונה המלאה";
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  line-height: 10rem;
+  text-align: center;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  color: transparent;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out 0.15s, color 0.3s ease-in-out;
+}
+
+.preview-image-container:hover::after {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out 0.15s;
+}

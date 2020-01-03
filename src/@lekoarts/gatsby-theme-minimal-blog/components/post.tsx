@@ -63,11 +63,13 @@ const Post = ({ data: { post } }: PostProps) => (
       )}
       {` — `}
       {post.timeToRead == 1 && <span>דקה לקריאה, אבל כנראה יותר להבנה 🙃</span>}
-      {post.timeToRead > 1 && <span>{post.timeToRead} דקות לקריאה, אבל כנראה יותר להבנה 🙃</span>}
+      {post.timeToRead > 1 && (
+        <span>{post.timeToRead} דקות לקריאה, אבל כנראה יותר להבנה 🙃</span>
+      )}
     </p>
     <section
       sx={{
-        my: 5,
+        my: 5
       }}
     >
       <MDXRenderer>{post.body}</MDXRenderer>
