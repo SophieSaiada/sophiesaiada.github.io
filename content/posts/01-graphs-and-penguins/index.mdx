@@ -83,3 +83,16 @@ $$
 
 לכל צומת בגרף המקורי, ולכל תת קבוצה של צמתי פינגווינים, אנחנו מגדירים צומת בגרף החדש.  
 נתרגם את זה לקוד:
+
+```kotlin:github=YossiSaiada/Post01GraphAndPenguins/blob/f57e28300c7ff6955a1c9bd259a27c1279825284/src/main/kotlin/Solver.kt#L40-L48
+private fun buildAdvancedGraph(original: Graph): Graph {
+    val penguins = original.vertices.filter(::isPenguin)
+    val subsets = penguins.toSet().subsets()
+    val vertices =
+        subsets.flatMap { subset ->
+            original.vertices.map { originalVertex ->
+                AdvancedVertex(originalVertex, subset)
+            }
+        }
+}
+```
