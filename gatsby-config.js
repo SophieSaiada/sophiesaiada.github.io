@@ -2,8 +2,8 @@ require(`dotenv`).config({
   path: `.env`
 });
 
-const pagesPath = `${__dirname}/content/pages`;
-const postsPath = `${__dirname}/content/posts`;
+const pagesPath = `./content/pages`;
+const postsPath = `./content/posts`;
 
 module.exports = {
   siteMetadata: {
