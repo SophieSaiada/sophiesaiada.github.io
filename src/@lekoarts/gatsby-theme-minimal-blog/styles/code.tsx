@@ -10,7 +10,7 @@ export default {
   ".math-inline": {
     display: "inline-block"
   },
-  "p > code": {
+  "p > code, li > code": {
     bg: `#f3f4f4`,
     color: `#476582`,
     borderRadius: `3px`,

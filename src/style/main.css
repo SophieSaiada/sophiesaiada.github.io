@@ -2,3 +2,9 @@ code {
   direction: ltr;
   display: inline-block;
 }
+ol ol {
+  margin-right: -1rem;
+}
+ol ol ol {
+  list-style-type: lower-alpha;
+}
