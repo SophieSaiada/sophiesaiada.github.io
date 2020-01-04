@@ -8,6 +8,6 @@ ol ol {
 ol ol ol {
   list-style-type: lower-alpha;
 }
-.math {
+.math-display {
   overflow-x: auto;
 }
