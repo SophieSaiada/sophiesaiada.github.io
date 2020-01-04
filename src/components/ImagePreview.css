@@ -29,6 +29,13 @@
   transition: background-color 0.3s ease-in-out 0.15s, color 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 640px) {
+  .preview-image-container::after {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 .preview-image-container:hover::after {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
