@@ -27,18 +27,18 @@ module.exports = {
     externalLinks: [
       {
         name: `GitHub`,
-        url: `https://github.com/SophiaSa/`
+        url: `https://github.com/SophiaSaiada/`
       }
     ],
     navigation: [
       {
         title: `פוסטים`,
         slug: `/blog`
-      },
-      {
-        title: `קצת עליי`,
-        slug: `/about`
       }
+      // {
+      //   title: `קצת עליי`,
+      //   slug: `/about`
+      // }
     ],
     basePath: "/",
     blogPath: "/blog",

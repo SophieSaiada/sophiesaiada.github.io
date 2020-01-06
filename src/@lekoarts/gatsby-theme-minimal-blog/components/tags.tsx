@@ -31,7 +31,7 @@ const Tags = ({ list }: PostsProps) => {
               sx={{ variant: `links.listItem`, mr: 2 }}
               to={`/${tagsPath}/${kebabCase(listItem.fieldValue)}`.replace(/\/\/+/g, `/`)}
             >
-              {listItem.fieldValue} <span sx={{ color: `secondary` }}>({listItem.totalCount})</span>
+              {listItem.fieldValue}<span sx={{ color: `secondary` }}>&rlm; ({listItem.totalCount})</span>
             </Styled.a>
           </Flex>
         ))}
