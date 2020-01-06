@@ -111,11 +111,13 @@ pre[class*="language-"] {
 }
 
 .token.atrule,
+.token.type,
 .token.keyword {
   color: #f06292;
 }
 
-.token.function {
+.token.function,
+.language-hs .token.constant {
   color: #4dd0e1;
 }
 
@@ -176,4 +178,12 @@ pre.line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
+}
+
+.language-hs .token.operator {
+  color: #a9a9a9;
+}
+
+.token.import_statement:not(.keyword) {
+  color: white;
 }

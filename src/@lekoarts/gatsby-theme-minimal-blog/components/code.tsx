@@ -1,7 +1,8 @@
 /* eslint react/destructuring-assignment: 0 */
 import React from "react";
 import Prism from "prism-react-renderer/prism";
-import kotlinLang from "refractor/lang/kotlin";
+import kotlinLang from "../../../syntax/kotlin";
+import haskellLang from "../../../syntax/haskell";
 import loadable from "@loadable/component";
 import theme from "prism-react-renderer/themes/nightOwl";
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
@@ -13,6 +14,7 @@ import "../styles/prism-atom-dark.css";
 import launchIcon from "../../../images/icons/launch-24px.svg";
 
 kotlinLang(Prism);
+haskellLang(Prism);
 
 type CodeProps = {
   codeString: string;
