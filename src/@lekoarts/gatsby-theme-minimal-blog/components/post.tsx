@@ -61,11 +61,6 @@ const Post = ({ data: { post } }: PostProps) => (
           <ItemTags tags={post.tags} />
         </React.Fragment>
       )}
-      {` — `}
-      {post.timeToRead == 1 && <span>דקה לקריאה, אבל כנראה יותר להבנה 🙃</span>}
-      {post.timeToRead > 1 && (
-        <span>{post.timeToRead} דקות לקריאה, אבל כנראה יותר להבנה 🙃</span>
-      )}
     </p>
     <section
       sx={{
