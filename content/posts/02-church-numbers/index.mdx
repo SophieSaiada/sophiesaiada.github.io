@@ -56,7 +56,7 @@ $$C_E(n + m)=C_E(n)+C_E(m)$$
 ה-$T$ הזה יכול להיות כל טיפוס נתונים. כלומר, $T$ הוא פרמטר גנרי בפונקציה ש-`CNumber` עוטף.  
 נכתוב את זה בהסקלית:
 
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L1-L5
 {-# LANGUAGE RankNTypes #-}
 newtype CNumber = Nr (forall t. (t -> t) -> t -> t)
 ```
@@ -66,20 +66,20 @@ newtype CNumber = Nr (forall t. (t -> t) -> t -> t)
 אז מה שהגדרנו כאן זה תבנית לפונקציות $C_n$. שימו לב שזה לא אומר שכל הפונקציות שמתאימות לתבנית בהכרח מתארות מספרים טבעיים בקידוד צ'רץ', התבנית היא באופן כללי לפונקציות שמקבלות פונקציות ואיבר ומחזירות איבר.
 
 בואו נשתמש בהגדרה בשביל להגדיר את $0$, $1$ ו-$2$ החדשים:
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L7-L10
 zero = Nr (\ f x -> x )
 one = Nr (\ f x -> f x )
 two = Nr (\ f x -> f (f x) )
 ```
 כמו שאמרנו מקודם, $C_0$ לא מפעילה את $f$ בכלל ומחזירה את $x$ כמו שהוא. $C_1$ מפעילה את $f$ על $x$ פעם אחת. ובאותו האופן, $C_2$ מפעילה פעמיים.  
 נניח שיש לנו עצם מסוג `CNumber`, וידוע שהוא קידוד של מפר טבעי כלשהו. איך נוכל לשחזר את המספר שהוא מייצג? כבר הזכרנו את זה למעלה, ובהסקל נכתוב את זה ככה:
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L12-L13
 eval :: CNumber -> Int
-eval (Nr a) = n (+1) 0
+eval (Nr n) = n (+1) 0
 ```
 השתמשנו בפונקציה עם הפרמטרים `(+1)` שמקבילה ל-$f(x)=x+1$ מלמעלה ו-`0`, וכך קיבלנו את המספר הטבעי שהפונקציה מייצגת.
 לפני שנממש את פונקציית החיבור, נממש אחת פשוטה יותר בשם `succ`. מה שהיא עושה זה לקבל עצם מסוג `CNumber`, ולהחזיר את העצם הבא אחריו ביצוג. כלומר, אם היא קיבלה את `one` היא תחזיר את `two`. הפונקציה הזו מקבילה לפונקצית העוקב המספרים הטבעיים.
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L15-L16
 succ :: CNumber -> CNumber
 succ (Nr a) = Nr (\ f x -> f (a f x) )
 ```
@@ -89,7 +89,7 @@ succ (Nr a) = Nr (\ f x -> f (a f x) )
 הערה קטנה: בשביל שהדבר הזה יתקמפל, חשוב להחליף את `import Prelude` שמופיע בראש הקוד, ב-`import Prelude hiding (succ)`, כדי שהפונקציה המובנית `succ` לא תתנגש עם המימוש שלנו.
 
 עכשיו יהיה לנו הרבה יותר קל להגדיר את פונקציית החיבור. אנחנו רוצים פונקציה בשם `plus` שתקבל שני עצמים מסוג `CNumber` ותחזיר את ה-`CNumber` שמתאר את החיבור של העצמים, לפי החיבור שהגדרנו למעלה.
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L19
 add :: CNumber -> CNumber -> CNumber
 add (Nr a) (Nr b) = Nr (\ f x -> a f (b f x))
 ```
@@ -97,12 +97,12 @@ add (Nr a) (Nr b) = Nr (\ f x -> a f (b f x))
 אבל אנחנו מסוגלים לכתוב את זה יותר יפה. יש לנו את הפונקציה `a` שיודעת להפעיל פונקציות על איבר כלשהו $n$ פעמים. למה לא שנשתמש בה בשביל להפעיל את `succ` על `Nr b` וככה למצוא את ה-`CNumber` שמתאר את $n+m$.
 למה זה הגיוני? כי אם מפעילים את `succ` על `b` פעם אחת מקבלים את ה-`CNumber` שמייצג את $m+1$.  
 ולכן אם נפעיל את `succ` על `b` $n$ פעמים באמצעות `a` נקבל את ה-`CNumber` שמייצג את $m+n$.
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L20
 add :: CNumber -> CNumber -> CNumber
 add (Nr a) (Nr b) = a succ (Nr b)
 ```
 יש דרך אפילו יותר קצרה לכתוב את זה, והיא:
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L21
 add :: CNumber -> CNumber -> CNumber
 add (Nr a) = a succ
 ```
@@ -110,14 +110,14 @@ add (Nr a) = a succ
 
 נשאר לנו לממש רק פונקציית הכפל! אציין שזה תרגיל נהדר בעיניי וכדאי לכם לנסות לפתור אותו בעצמכם. כמובן שאתם יכולים פשוט להסתכל על התשובה בהמשך, אבל יהרס כל הכיף 🙃  
 אנחנו רוצים להשתמש עוד פעם ב-`a` בשביל לחשב את ה-`CNumber` החדש. נעשה את זה ככה: 
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L23-L25
 mult :: CNumber -> CNumber -> CNumber
 mult (Nr a) (Nr b) = a (add (Nr b)) zero
 ```
 נעבור שלב שלב. התוצאה `add (Nr b)` היא פונקציה שמקבלת `CNumber` כלשהו ומחברת אליו את `Nr b`. אנחנו משתמשים ב-`a` בשביל לחבר ל-`zero`, ה-`CNumber` שמייצג את $0$, את `b` $n$ פעמים. בסה"כ הפעלנו על `zero` את `succ` $m$ פעמים בכל הפעלה של `add (Nr b)` וסה"כ $n*m$ פעמים. ולכן קיבלנו את ה-`CNumber` שמייצג את $n*m$.
 
 באותה צורה אפשר להגדיר חזקה! אבל אותה אני לא אסביר, אלא פשוט אראה את הקוד:
-```hs
+```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L27-L29
 pow :: CNumber -> CNumber -> CNumber
 pow (Nr a) (Nr b) = b (mult a) one
 ```

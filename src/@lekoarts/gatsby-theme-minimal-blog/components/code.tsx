@@ -92,9 +92,17 @@ const Code = ({
 }: CodeProps) => {
   const { showLineNumbers } = useSiteMetadata();
 
-  const [language, { title = ``, github = `` }] = getParams(blockClassName);
+  const [language, { title = ``, gist = ``, github = `` }] = getParams(
+    blockClassName
+  );
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
 
+  const gitLink =
+    github != ""
+      ? "https://github.com/" + github
+      : gist != ""
+      ? "https://gist.github.com/" + gist
+      : null;
   const hasLineNumbers =
     !noLineNumbers && language !== `noLineNumbers` && showLineNumbers;
 
@@ -117,7 +125,7 @@ const Code = ({
             </div>
           )}
           <div
-            className={`gatsby-highlight ${(github && "with-github-link") ||
+            className={`gatsby-highlight ${(gitLink && "with-github-link") ||
               ""}`}
             data-language={language}
           >
@@ -146,10 +154,10 @@ const Code = ({
               })}
             </pre>
           </div>
-          {github && (
+          {gitLink && (
             <a
               className="gatsby-highlight--github--container"
-              href={"https://github.com/" + github}
+              href={gitLink}
             >
               <img src={launchIcon} />
               לקוד המלא ב-GitHub
