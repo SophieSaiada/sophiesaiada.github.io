@@ -23,7 +23,7 @@ const ProjectsListing = ({ projects }: ListingProps) => (
         <Styled.a
           as={"a"}
           href={project.url}
-          sx={{ fontWeight: `semibold`, fontSize: [1, 2, 3], color: `text` }}
+          sx={{ fontWeight: `semibold`, fontSize: [2, 2, 3], color: `text` }}
         >
           {project.name}
         </Styled.a>
