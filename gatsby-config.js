@@ -45,7 +45,28 @@ module.exports = {
     tagsPath: "/tags",
     pagesPath,
     postsPath,
-    showLineNumbers: true
+    showLineNumbers: true,
+    projects: [
+      {
+        name: "Gödel",
+        description: "שפת תכנות שפתחתי בתור פרויקט גמר לתואר.<br />מכילה מאפיינים של שפות מונחות עצמים ושפות פונקציונליות.",
+        url: "https://github.com/SophiaSaiada/Godel",
+        tags: ["Kotlin", "Meta Programming", "אלגוריתמים"]
+      },
+      {
+        name: "vue-conversational-form",
+        description: "קומפוננטת Vue.js שמאפשרת להפוך טפסים לשיחות צ'אט.<br />מימוש מחדש של הפרויקט ה<a href=\"https://github.com/space10-community/conversational-form\">זה<a/> בתור Higer-Order-Component של Vue.js.</a>",
+        url: "https://github.com/SophiaSaiada/vue-conversational-form",
+        stars: 23,
+        tags: ["Vue.js", "Front-End"]
+      },
+      {
+        name: "vue-scala-calculator",
+        description: "פרויקט קטן של מימוש מחשבון מדעי ב-Scala.js ו-Vue.js.<br />המחשבון מראה את ה-AST&rlm; (Abstract Syntax Tree) של הביטוי, ומאפשר לחשב את הערך הסופי עם אנימציה נחמדה.<br />זה למעשה היה הפרויקט שהוביל אותי לפתח את שפת התכנות Gödel (שניהם מכילים Parsing של ביטויים, אבל ב-Gödel זה יותר מורכב).",
+        url: "https://github.com/SophiaSaiada/vue-scala-calculator",
+        tags: ["Scala", "Vue.js", "Front-End", "אלגוריתמים"]
+      }
+    ]
   },
   plugins: [
     {

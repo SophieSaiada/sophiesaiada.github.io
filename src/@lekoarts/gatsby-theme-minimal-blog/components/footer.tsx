@@ -12,7 +12,7 @@ const Footer = () => {
       sx={{
         variant: `dividers.top`,
         justifyContent: `space-between`,
-        mt: [6],
+        mt: [3],
         color: `secondary`,
         a: {
           variant: `links.secondary`
