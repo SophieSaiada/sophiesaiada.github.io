@@ -3,7 +3,7 @@ import { jsx, Styled } from "theme-ui";
 import { Link } from "gatsby";
 import { Heading, Flex } from "@theme-ui/components";
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout";
-import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing";
+import GridPosts from "../../../components/grid-posts";
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo";
@@ -44,7 +44,7 @@ const Blog = ({ posts }: PostsProps) => {
           כל התגיות
         </Styled.a>
       </Flex>
-      <Listing posts={posts} sx={{ mt: [4, 5] }} />
+      <GridPosts posts={posts} sx={{ mt: [4, 5] }} />
     </Layout>
   );
 };

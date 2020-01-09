@@ -98,7 +98,7 @@ prepareWord(wordIndex) {
   }
 
   fixRTL(word) {
-    return word.replace(/[a-zA-Z\-]+/g, (match) => match.split("").reverse().join(""))
+    return word.replace(/[a-zA-Z-]+/g, (match) => match.split("").reverse().join(""))
   }
 
   render() {

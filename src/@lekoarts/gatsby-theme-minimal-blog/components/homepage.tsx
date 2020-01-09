@@ -5,10 +5,10 @@ import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout";
 import Hero from "@lekoarts/gatsby-theme-minimal-blog/src/texts/hero";
 import Bottom from "@lekoarts/gatsby-theme-minimal-blog/src/texts/bottom";
 import Title from "@lekoarts/gatsby-theme-minimal-blog/src/components/title";
-import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing";
 import List from "@lekoarts/gatsby-theme-minimal-blog/src/components/list";
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
+import GridPosts from "../../../components/grid-posts";
 import ProjectsListing from "../../../components/projects-listing";
 
 type PostsProps = {
@@ -34,14 +34,12 @@ const Homepage = ({ posts }: PostsProps) => {
       <Title text="פוסטים אחרונים">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>לכל הפוסטים</Link>
       </Title>
-      <Listing posts={posts} showTags={false} />
+      <GridPosts posts={posts} showTags={false} limitPostWhenSingleColumn />
       <List>
         <Bottom />
       </List>
       <Title text="פרויקטים">
-        <a href="https://github.com/SophiaSaiada">
-          ל-GitHub
-        </a>
+        <a href="https://github.com/SophiaSaiada">ל-GitHub</a>
       </Title>
       <ProjectsListing projects={projects} />
       <List>
