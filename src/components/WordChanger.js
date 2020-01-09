@@ -17,16 +17,16 @@ class WordChanger extends React.Component {
       })),
       currentWordIndex: 0
     };
-    console.log(this.state)
 
     this.setLetterMode = this.setLetterMode.bind(this);
     this.animateLetterMode = this.animateLetterMode.bind(this);
     this.changeWord = this.changeWord.bind(this);
+    this.prepareWord = this.prepareWord.bind(this);
   }
 
   componentDidMount() {
     this.changeWord();
-    this.changeWordInterval = setInterval(() => this.changeWord(), 4000);
+    this.changeWordInterval = setInterval(this.changeWord, 4000);
   }
   componentWillUnmount() {
     this.changeWordInterval && clearInterval(this.changeWordInterval);
@@ -38,6 +38,23 @@ class WordChanger extends React.Component {
     }, letterIndex * 80);
   }
 
+prepareWord(wordIndex) {
+  this.setState({
+    words: this.state.words.map((word, mapWordIndex) => ({
+      ...word,
+      opacity: 1,
+      letters:
+        mapWordIndex === wordIndex
+          ? word.letters.map(letter => ({
+              ...letter,
+              mode: "behind"
+            }))
+          : word.letters
+    }))
+  });
+
+}
+
   setLetterMode(wordIndex, letterIndex, newMode) {
     this.setState({
       words: this.state.words.map((word, mapWordIndex) => ({
@@ -45,7 +62,7 @@ class WordChanger extends React.Component {
         letters:
           mapWordIndex === wordIndex
             ? word.letters.map((letter, mapLetterIndex) => ({
-                content: letter.content,
+                ...letter,
                 mode: mapLetterIndex === letterIndex ? newMode : letter.mode
               }))
             : word.letters
@@ -64,9 +81,9 @@ class WordChanger extends React.Component {
       this.animateLetterMode(currentWordIndex, letterIndex, "out");
     });
 
+    this.prepareWord(newWordIndex)
     setTimeout(() => {
       this.state.words[newWordIndex].letters.forEach((_, letterIndex) => {
-        this.setLetterMode(newWordIndex, letterIndex, "behind");
         this.animateLetterMode(newWordIndex, letterIndex, "in");
       });
   
