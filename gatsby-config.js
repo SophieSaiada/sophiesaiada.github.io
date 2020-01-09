@@ -34,11 +34,11 @@ module.exports = {
       {
         title: `פוסטים`,
         slug: `/blog`
+      },
+      {
+        title: `קצת עליי`,
+        slug: `/about`
       }
-      // {
-      //   title: `קצת עליי`,
-      //   slug: `/about`
-      // }
     ],
     basePath: "/",
     blogPath: "/blog",

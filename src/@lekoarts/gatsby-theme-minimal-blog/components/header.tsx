@@ -7,6 +7,7 @@ import ColorModeToggle from "@lekoarts/gatsby-theme-minimal-blog/src/components/
 import useNavigation from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-navigation";
 import Navigation from "@lekoarts/gatsby-theme-minimal-blog/src/components/navigation";
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
+import logo from "../../../images/Logo.svg";
 
 const Header = () => {
   const { siteTitle, externalLinks, basePath } = useSiteMetadata();
@@ -26,9 +27,7 @@ const Header = () => {
           aria-label={`${siteTitle} - Back to home`}
           sx={{ color: `heading`, textDecoration: `none` }}
         >
-          <h1 sx={{ my: 0, fontWeight: `semibold`, fontSize: [3, 4] }}>
-            {siteTitle}
-          </h1>
+          <img src={logo} sx={{ height: [5, 6] }} />
         </Link>
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       </Flex>
@@ -44,11 +43,13 @@ const Header = () => {
       >
         <Navigation nav={nav} />
         <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
-          {externalLinks.filter(link => link.name == "GitHub").map(link => (
-            <Styled.a key={link.url} href={link.url}>
-              {link.name}
-            </Styled.a>
-          ))}
+          {externalLinks
+            .filter(link => link.name == "GitHub")
+            .map(link => (
+              <Styled.a key={link.url} href={link.url}>
+                {link.name}
+              </Styled.a>
+            ))}
         </div>
       </Flex>
     </header>

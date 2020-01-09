@@ -1,8 +1,20 @@
+import WordChanger from "../../../components/WordChanger.js"
+
 <Text sx={{ fontFamily: `heading`, fontSize: [4, 5, 6], color: `heading` }}>
-  היי, אני סופיה.
+    <Text sx={{mb: -4}}>
+    היי, אני סופיה,
+    </Text>
+    <WordChanger prefix="מפתחת " words={[
+        {color: "#29b1d6", word: "React"},
+        {color: "#9c27b0", word: "Full-Stack"},
+        {color: "#1976d2", word: "iOS"},
+        {color: "#d19600", word: "Python"},
+        {color: "#689f38", word: "Android"},
+    ]} />
 </Text>
 
-<p>
-מפתחת Full-Stack במובייל וב-Web, וחובבת אלגוריתמים.
-<div style={{fontSize: ".75em"}}>יש שיטענו שיש לי גם ”עין עיצובית“, אבל אני לא מתפרנסת מזה. 🙃</div>
+<p>  
+    מפתחת Full-Stack במובייל וב-Web עם ניסיון של שנה וחצי.<br />
+    ב-2020 סיימתי תואר ראשון במדעי המחשב ומתתמטיקה בהצטיינות.<br />
+    חובבת גרפים ואלגוריתמים, אבל לא יצא לי לעסוק בזה באופן מקצועי.<br />
 </p>

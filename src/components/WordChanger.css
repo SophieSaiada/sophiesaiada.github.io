@@ -1,0 +1,33 @@
+.word-changer--prefix,
+.word-changer--word-container {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.word-changer--word {
+  position: absolute;
+  opacity: 0;
+}
+
+.word-changer--letter {
+  display: inline-block;
+  position: relative;
+  transform-origin: 50% 50% 25px;
+}
+
+.word-changer--letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.word-changer--letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.word-changer--letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
