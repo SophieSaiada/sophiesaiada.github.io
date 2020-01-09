@@ -32,6 +32,10 @@ module.exports = {
     ],
     navigation: [
       {
+        title: `עמוד ראשי`,
+        slug: `/`
+      },
+      {
         title: `פוסטים`,
         slug: `/blog`
       },

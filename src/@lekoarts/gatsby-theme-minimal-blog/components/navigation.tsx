@@ -19,7 +19,7 @@ const Navigation = ({ nav }: NavigationProps) => {
       sx={{
         "a:not(:last-of-type)": { ml: 3 },
         fontSize: [1, `18px`],
-        ".active": { color: `heading` }
+        ".active": { color: `heading`, fontWeight: `bold` }
       }}
     >
       {nav.map(item => (

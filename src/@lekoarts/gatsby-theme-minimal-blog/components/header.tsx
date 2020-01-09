@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header sx={{ mb: [5, 6] }}>
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+      <Flex sx={{ mb: 2, alignItems: `center`, justifyContent: `space-between` }}>
         <Link
           to={replaceSlashes(`/${basePath}`)}
           aria-label={`${siteTitle} - Back to home`}
