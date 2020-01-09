@@ -32,7 +32,10 @@ const ProjectsListing = ({ projects }: ListingProps) => (
             {project.stars} GitHub Stars
           </div>
         )}
-        <div className="project--description" dangerouslySetInnerHTML={{__html: project.description}}></div>
+        <div
+          className="project--description"
+          dangerouslySetInnerHTML={{ __html: project.description }}
+        ></div>
         <p
           sx={{
             color: `secondary`,
@@ -52,7 +55,10 @@ const ProjectsListing = ({ projects }: ListingProps) => (
             </React.Fragment>
           )}
           {project.stars && (
-            <div className="project--tag" sx={{ display: ["inline-block", "none"] }}>
+            <div
+              className="project--tag"
+              sx={{ display: ["inline-block", "none"], direction: "ltr" }}
+            >
               {project.stars} GitHub Stars
             </div>
           )}
