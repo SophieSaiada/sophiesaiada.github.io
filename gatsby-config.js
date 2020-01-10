@@ -59,7 +59,7 @@ module.exports = {
       },
       {
         name: "vue-conversational-form",
-        description: "קומפוננטת Vue.js שמאפשרת להפוך טפסים לשיחות צ'אט.<br />מימוש מחדש של הפרויקט ה<a href=\"https://github.com/space10-community/conversational-form\">זה<a/> בתור Higer-Order-Component של Vue.js.</a>",
+        description: "קומפוננטת Vue.js שמאפשרת להפוך טפסים לשיחות צ'אט.<br />מימוש מחדש של הפרויקט ה<a href=\"https://github.com/space10-community/conversational-form\">זה<a/> בתור Higher-Order-Component של Vue.js.</a>",
         url: "https://github.com/SophiaSaiada/vue-conversational-form",
         stars: 23,
         tags: ["Vue.js", "Front-End"]
