@@ -28,6 +28,10 @@ module.exports = {
       {
         name: `GitHub`,
         url: `https://github.com/SophiaSaiada/`
+      },
+      {
+        name: `LinkedIn`,
+        url: `https://www.linkedin.com/in/sophia-saiada/`
       }
     ],
     navigation: [
@@ -68,7 +72,7 @@ module.exports = {
         name: "vue-scala-calculator",
         description: "פרויקט קטן של מימוש מחשבון מדעי ב-Scala.js ו-Vue.js.<br />המחשבון מראה את ה-AST&rlm; (Abstract Syntax Tree) של הביטוי, ומאפשר לחשב את הערך הסופי עם אנימציה נחמדה.<br />זה למעשה היה הפרויקט שהוביל אותי לפתח את שפת התכנות Gödel (שניהם מכילים Parsing של ביטויים, אבל ב-Gödel זה יותר מורכב).",
         url: "https://github.com/SophiaSaiada/vue-scala-calculator",
-        tags: ["Scala", "Vue.js", "Front-End", "אלגוריתמים"]
+        tags: ["Scala", "Vue.js", "אלגוריתמים"]
       }
     ]
   },

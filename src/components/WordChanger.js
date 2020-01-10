@@ -26,7 +26,7 @@ class WordChanger extends React.Component {
 
   componentDidMount() {
     this.changeWord();
-    this.changeWordInterval = setInterval(this.changeWord, 4000);
+    this.changeWordInterval = setInterval(this.changeWord, 3000);
   }
   componentWillUnmount() {
     this.changeWordInterval && clearInterval(this.changeWordInterval);

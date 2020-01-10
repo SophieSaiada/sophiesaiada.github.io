@@ -44,7 +44,6 @@ const Header = () => {
         <Navigation nav={nav} />
         <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
           {externalLinks
-            .filter(link => link.name == "GitHub")
             .map(link => (
               <Styled.a key={link.url} href={link.url}>
                 {link.name}
