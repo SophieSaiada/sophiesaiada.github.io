@@ -8,7 +8,7 @@ import Language from "../../../lang";
 type NavigationProps = {
   nav: {
     title: { he: string; en: string };
-    slug: string;
+    slug: { he: string; en?: string };
   }[];
   lang: Language;
 };
@@ -31,9 +31,9 @@ const Navigation = ({ nav, lang }: NavigationProps) => {
           as={Link}
           activeClassName="active"
           to={replaceSlashes(
-            `/${basePath}/${item.slug}/${
-              lang == Language.en && item.title.en != "Home" ? "en" : ""
-            }`
+            `/${basePath}/${
+              lang == Language.he ? item.slug.he : item.slug.en || item.slug.he
+            }/`
           )}
         >
           {lang == Language.he ? item.title.he : item.title.en}

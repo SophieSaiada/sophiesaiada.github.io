@@ -21,7 +21,10 @@ const useNavigation = () => {
               he
               en
             }
-            slug
+            slug {
+              he
+              en
+            }
           }
         }
       }

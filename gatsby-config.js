@@ -37,16 +37,16 @@ module.exports = {
     ],
     navigation: [
       {
-        title: {he: `עמוד ראשי`, en: `Home`},
-        slug: `/`
+        title: { he: `עמוד ראשי`, en: `Home` },
+        slug: { he: `/`, en: `/` }
       },
       {
-        title: {he: `פוסטים`, en: `Blog`},
-        slug: `/blog`
+        title: { he: `פוסטים`, en: `Blog` },
+        slug: { he: `/blog`, en: `/blog` }
       },
       {
-        title: {he: `קצת עליי`, en: `About`},
-        slug: `/about`
+        title: { he: `קצת עליי`, en: `About` },
+        slug: { he: `/about`, en: `/about` }
       }
     ],
     basePath: "/",
@@ -58,20 +58,23 @@ module.exports = {
     projects: [
       {
         name: "Gödel",
-        description: "שפת תכנות שפתחתי בתור פרויקט גמר לתואר.<br />מכילה מאפיינים של שפות מונחות עצמים ושפות פונקציונליות.",
+        description:
+          "שפת תכנות שפתחתי בתור פרויקט גמר לתואר.<br />מכילה מאפיינים של שפות מונחות עצמים ושפות פונקציונליות.",
         url: "https://github.com/SophiaSaiada/Godel",
         tags: ["Kotlin", "Meta Programming", "אלגוריתמים"]
       },
       {
         name: "vue-conversational-form",
-        description: "קומפוננטת Vue.js שמאפשרת להפוך טפסים לשיחות צ'אט.<br />מימוש מחדש של הפרויקט ה<a href=\"https://github.com/space10-community/conversational-form\">זה<a/> בתור Higher-Order-Component של Vue.js.</a>",
+        description:
+          'קומפוננטת Vue.js שמאפשרת להפוך טפסים לשיחות צ\'אט.<br />מימוש מחדש של הפרויקט ה<a href="https://github.com/space10-community/conversational-form">זה<a/> בתור Higher-Order-Component של Vue.js.</a>',
         url: "https://github.com/SophiaSaiada/vue-conversational-form",
         stars: 23,
         tags: ["Vue.js", "Front-End"]
       },
       {
         name: "vue-scala-calculator",
-        description: "פרויקט קטן של מימוש מחשבון מדעי ב-Scala.js ו-Vue.js.<br />המחשבון מראה את ה-AST&rlm; (Abstract Syntax Tree) של הביטוי, ומאפשר לחשב את הערך הסופי עם אנימציה נחמדה.<br />זה למעשה היה הפרויקט שהוביל אותי לפתח את שפת התכנות Gödel (שניהם מכילים Parsing של ביטויים, אבל ב-Gödel זה יותר מורכב).",
+        description:
+          "פרויקט קטן של מימוש מחשבון מדעי ב-Scala.js ו-Vue.js.<br />המחשבון מראה את ה-AST&rlm; (Abstract Syntax Tree) של הביטוי, ומאפשר לחשב את הערך הסופי עם אנימציה נחמדה.<br />זה למעשה היה הפרויקט שהוביל אותי לפתח את שפת התכנות Gödel (שניהם מכילים Parsing של ביטויים, אבל ב-Gödel זה יותר מורכב).",
         url: "https://github.com/SophiaSaiada/vue-scala-calculator",
         tags: ["Scala", "Vue.js", "אלגוריתמים"]
       }
@@ -109,30 +112,31 @@ module.exports = {
       }
     },
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-    //     short_name: `minimal-blog`,
-    //     description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
-    //     start_url: `/`,
-    //     background_color: `#fff`,
-    //     theme_color: `#6B46C1`,
-    //     display: `standalone`,
-    //     icons: [
-    //       {
-    //         src: `/android-chrome-192x192.png`,
-    //         sizes: `192x192`,
-    //         type: `image/png`
-    //       },
-    //       {
-    //         src: `/android-chrome-512x512.png`,
-    //         sizes: `512x512`,
-    //         type: `image/png`
-    //       }
-    //     ]
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "./src/images/AvatarGithub.png"
+      //   name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
+      //   short_name: `minimal-blog`,
+      //   description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+      //   start_url: `/`,
+      //   background_color: `#fff`,
+      //   theme_color: `#6B46C1`,
+      //   display: `standalone`,
+      //   icons: [
+      //     {
+      //       src: `/android-chrome-192x192.png`,
+      //       sizes: `192x192`,
+      //       type: `image/png`
+      //     },
+      //     {
+      //       src: `/android-chrome-512x512.png`,
+      //       sizes: `512x512`,
+      //       type: `image/png`
+      //     }
+      //   ]
+      }
+    },
     // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
