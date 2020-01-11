@@ -14,10 +14,10 @@ tags:
 </small>
 
 Let's talk about numbers. Not about the "regular" numbers we all know, but on another representation of numbers, numbers in **Church Encoding**.  
-Church Encoding is a way to represent natural numbers as Higher Order Functions. **Higher order function** (HOF) is a function that receives functions as an input, or returns a function as an output. Those are functions who operate on functions.  
+Church Encoding is a way to represent natural numbers as Higher Order Functions. **Higher order function** (HOF) is a function that receives functions as an input, or returns a function as an output. Those are functions which operate on functions.  
 As we understood what higher order functions are, let's define our encoding:  
 The encoding will match each natural number $n$ to a function, named $C_n$ which is defined in this way:  
-$C_n$ receives two parameters. The first is a function name $f$, who maps some element of type $T$ to some element of type $T$. The second parameter is a value of type $T$, named $x$.  
+$C_n$ receives two parameters. The first is a function name $f$, which maps some element of type $T$ to some element of type $T$. The second parameter is a value of type $T$, named $x$.  
 The function, $C_n$, will return the outcome of operating $f$ on $x$ $n$ times in a chain. I mean, at the first time we will operate $f$ on $x$, then $f$ on $f(x)$ and so on $n$ times overall. If we want to write it formally, we will write it this way:
 
 $$
@@ -36,32 +36,32 @@ We will define $f$ as $f(x)=2*x$, so in the next examples, the type $T$ we menti
 - The result of $C_1(f,3)$ is $f(3)=2*3=6$.
 - The result of $C_2(f,3)$ is $f(f(3))=f(2*3)=2*(2*3)=12$.
 
-So, we understood how the encoding maps a natural number to a HOF. But that was only the first direction. We should define the inverted mapping, from an HOF (that guaranteed to represent a natural number in Church Encoding) to a natural number. Fortunately, the opposite direction is way simpler. We have a function, named $C_h$. We know it is representing some natural number $h$, but we don't know who is $h$. So, we will calculate $C_h(f,x)$ for $f(x)=x+1$ as $f$, and $0$ as $x$. $C_h$ is going to apply $x+1$ on $0$, $h$ times overall, so we will get $1*h=h$ as a result!
+So, we understood how the encoding maps a natural number to a HOF. But that was only the first direction. We should define the inverted mapping, from an HOF (that guaranteed to represent a natural number in Church Encoding) to a natural number. Fortunately, the opposite direction is way simpler. We have a function, named $C_h$. We know it is representing some natural number $h$, but we don't know which number is $h$. So, we will calculate $C_h(f,x)$ for $f(x)=x+1$ as $f$, and $0$ as $x$. $C_h$ is going to apply $x+1$ on $0$, $h$ times overall, so we will get $1*h=h$ as a result!
 
 The mapping works for both directions! 🥳  
-Let's the function who maps a natural number $n$ to its corresponding $C_n$ HOF, marked as $C_E$ (E stands for encoding). The inverted function, who maps a result of $C_E$ to its original natural number, will be named $C_D$ (you know what D stands for). We will name a HOF that was returned by $C_E$ a Church function, it's not a formal term, but it will make my sentences much shorter. 🙃
+Let's mark the function which maps a natural number $n$ to its corresponding $C_n$ HOF, as $C_E$ (E stands for encoding). The inverted function, which maps a result of $C_E$ to its original natural number, and will be named $C_D$ (D stands for decoding). We will name a HOF that was returned by $C_E$ a Church function, it's not a formal term, but it will make my sentences much shorter. 🙃
 
 Now, we should define addition and multiplication on Church Numbers. The operations should preserve the encoding. That means, we want to fulfill this equation:
 $$C_E(n+m)=C_E(n)+C_E(m)$$
 The notations here are a bit tricky.
 The plus sign in the left side represents an addition between two natural numbers. The result of this addition is mapped to a Church function by $C_E$.  
 What happened in the right side is we apply $C_E$ for each number, $n$ and $m$, separately, and then sum the results, the Church functions that represent $n$ and $m$. The addition in the right hand isn't the regular addition for natural numbers, it's an addition between Church functions. We should define it, and we are going to do so:  
-The result of $C_n+C_m$ should be the function $C*{n+m}$, the Church function who takes two parameters, $f$ and $x$, and returns $f$ applied on $x$, $n+m$ times. In the same way we will define the multiplication between Church functions. The result of $C_n*C_m$ is $C_{n*m}$.
+The result of $C_n+C_m$ should be the function $C*{n+m}$, the Church function which takes two parameters, $f$ and $x$, and returns $f$ applied on $x$, $n+m$ times. In the same way we will define the multiplication between Church functions. The result of $C_n*C_m$ is $C_{n*m}$.
 
 In my opinion, this is a beautiful way to represents the natural numbers. The thing that [Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church) want to show in this encoding is that we can solve any computable by using _only functions_ as primitive types.  
 Obviously, we shouldn't use this representation in practice, as it is much cheaper to represent numbers in memory as bits than as functions.  
-But it is ain't gonna stop us from doing so, as it will help us understand how the addition and the multiplication, we defined earlier, actually work.
+But it ain't gonna stop us from doing so, as it will help us understand how the addition and the multiplication, we defined earlier, actually work.
 
-We are going to model our encoding in Haskell, which is a great language for this purpose, as functions are primitive types in it and it is really easy to write functions who operates on functions.  
-Let's define a new type, named `CNumber` to hold a Church function. Actually, it's ain't a new type, but a wrapper for a higher order function that receives 2 parameters (a function who maps value from $T$ to a value from $T$, and a value of $T$). This $T$ can be any type, so $T$ is a generic parameter (or type parameter) of this wrapped function. We write it in Haskell in this way:
+We are going to model our encoding in Haskell, which is a great language for this purpose, as functions are primitive types in it and it is really easy to write functions which operates on functions.  
+Let's define a new type, named `CNumber` to hold a Church function. Actually, it's ain't a new type, but a wrapper for a higher order function that receives 2 parameters (a function which maps value from $T$ to a value from $T$, and a value of $T$). This $T$ can be any type, so $T$ is a generic parameter (or type parameter) of this wrapped function. We write it in Haskell in this way:
 
 ```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L1-L5
 {-# LANGUAGE RankNTypes #-}
 newtype CNumber = Nr (forall t. (t -> t) -> t -> t)
 ```
 
-The first line allows us to use the keyword `forall`,defining a bit complicated generic function. In the second line we are defining `CNumber`, saying its constructor is named `Nr` and that it receives a higher order generic function (who its generic parameter is `t`), from the kind we mentioned earlier.  
-I will bring to your mind that in Haskell, the type `a -> b -> c` represents a function who takes a value of type `a` and a value of type `b` as its parameters, and returns a value of type `c`.  
+The first line allows us to use the keyword `forall`,defining a bit complicated generic function. In the second line we are defining `CNumber`, saying its constructor is named `Nr` and that it receives a higher order generic function (which its generic parameter is `t`), from the kind we mentioned earlier.  
+I will bring to your mind that in Haskell, the type `a -> b -> c` represents a function which takes a value of type `a` and a value of type `b` as its parameters, and returns a value of type `c`.  
 The type we defined above, `CNumber` is a container for Church function. Please notice that it doesn’t mean every value of type `CNumber` is actually a Church function, the container will match every HOF that receive a function and a value and returns a value.  
 Let's define $C_0$, $C_1$ and $C_2$:
 
@@ -79,7 +79,7 @@ eval :: CNumber -> Int
 eval (Nr n) = n (+1) 0
 ```
 
-We used the function that the `CNumber` holds to apply `(+1)`, who corresponds to $f(x)=x+1$ that was mentioned earlier, and `0`, and so, we received the natural number that this Church function represents.
+We used the function that the `CNumber` holds to apply `(+1)`, which corresponds to $f(x)=x+1$ that was mentioned earlier, and `0`, and so, we received the natural number that this Church function represents.
 
 We are going to define the addition function. But before that, we can define a simpler function, named `succ`, that increase a `CNumber` by `one`. I mean, `succ zero` returns `one` (the `CNumber` that represents $1$), `succ one` returns `two`, and so one.
 
@@ -88,7 +88,7 @@ succ :: CNumber -> CNumber
 succ (Nr a) = Nr (\ f x -> f (a f x) )
 ```
 
-Assuming that `succ` receives a `CNumber` represents $n$. We define the result as a new function, who takes a function `f` and a value `x`. it is going to use `a` (the function that the given `CNumber` holds) to apply `f` on `x` $n$ times, and then apply `f` on the result once again. And so, we got the `CNumber` that represents $n+1$!  
+Assuming that `succ` receives a `CNumber` represents $n$. We define the result as a new function, which takes a function `f` and a value `x`. it is going to use `a` (the function that the given `CNumber` holds) to apply `f` on `x` $n$ times, and then apply `f` on the result once again. And so, we got the `CNumber` that represents $n+1$!  
 A little note: if you want this code to compile, you should replace `import Prelude`, that usually appears on the top of the code, with `import Prelude hiding (succ)`, so the built-in function named `succ` won't collide ours.  
 Now, it will be much easier to define addition! We want a function named `add`, that receives two values of type `CNumber` and returns a `CNumber` that represents the addition of the Church functions that the parameters hold.
 
@@ -99,7 +99,7 @@ add (Nr a) (Nr b) = Nr (\ f x -> a f (b f x))
 
 We assume that `a` and `b` are Church functions that represents $n$ and $m$, respectively. The function we had wrote use `b` to apply `f` on `x` $m$ times, and then use `a` to apply `f` on the result $n$ more times. At overall, the result function applies `f` on `x` $n+m$ times, as we aimed to.
 
-But we can do better! We have the function `a`, who knows to apply a certain function $n$ times. Let's use it smarter. We can apply `succ` on `Nr b` (the `CNumber` that holds a Church function that represents $m$) $n$ times, and so, we will get the `CNumber` that holds a Church function that represents $n+m$.
+But we can do better! We have the function `a`, which knows to apply a certain function $n$ times. Let's use it smarter. We can apply `succ` on `Nr b` (the `CNumber` that holds a Church function that represents $m$) $n$ times, and so, we will get the `CNumber` that holds a Church function that represents $n+m$.
 
 ```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L20
 add :: CNumber -> CNumber -> CNumber
@@ -123,7 +123,7 @@ mult :: CNumber -> CNumber -> CNumber
 mult (Nr a) (Nr b) = a (add (Nr b)) zero
 ```
 
-Again, we assume that `a` and `b` are Church functions that represents $n$ and $m$, respectively. The value of `add (Nr b)` is a function that receives a `CNumber` and adds `Nr b` to it. We use `a` to add `Nr b` to `zero`, $n$ times overall. As `b` is a Church function represents $m$, the total result will be a `CNumber` that holds a Church functions who represents $n*m$.
+Again, we assume that `a` and `b` are Church functions that represents $n$ and $m$, respectively. The value of `add (Nr b)` is a function that receives a `CNumber` and adds `Nr b` to it. We use `a` to add `Nr b` to `zero`, $n$ times overall. As `b` is a Church function represents $m$, the total result will be a `CNumber` that holds a Church function which represents $n*m$.
 
 In the same way we can define a power of Church function!
 
