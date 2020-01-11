@@ -92,7 +92,7 @@ succ (Nr a) = Nr (\ f x -> f (a f x) )
 
 Given that `succ` receives a `CNumber` that represents $n$,
 we define the result as a new function, which takes a function `f` and a value `x`.
-The new function is going to use `a` (the function that the given `CNumber` holds) to apply `f` on `x` $n$ times, and then apply `f` on the result once again. And so, we got the `CNumber` that represents $n+1$!  
+The new function is going to use `a` (the function that the given `CNumber` holds) to apply `f` on `x` $n$ times, and then apply `f` on the result once again. And so, we got the `CNumber` that represents $n+1$.  
 A little note: if you want this code to compile, you should replace `import Prelude`, that usually appears on the top of the code, with `import Prelude hiding (succ)`, so the built-in function named `succ` won't collide ours.  
 Now, it will be much easier to define addition! We want a function named `add`, that receives two values of type `CNumber` and returns a `CNumber` that represents the addition of the Church functions that the parameters hold.
 
