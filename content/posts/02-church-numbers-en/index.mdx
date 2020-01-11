@@ -38,15 +38,15 @@ We will define $f$ as $f(x)=2*x$, so in the next examples, the type $T$ we menti
 
 So, we understood how the encoding maps a natural number to a HOF. But that was only the first direction. We should define the inverted mapping, from an HOF (that guaranteed to represent a natural number in Church Encoding) to a natural number. Fortunately, the opposite direction is way simpler. We have a function, named $C_h$. We know it is representing some natural number $h$, but we don't know who is $h$. So, we will calculate $C_h(f,x)$ for $f(x)=x+1$ as $f$, and $0$ as $x$. $C_h$ is going to apply $x+1$ on $0$, $h$ times overall, so we will get $1*h=h$ as a result!
 
-The mapping is working for both direction! 🥳  
+The mapping works for both direction! 🥳  
 Let's the function who maps a natural number $n$ to its corresponding $C_n$ HOF, marked as $C_E$ (E stands for encoding). The inverted function, who maps a result of $C_E$ to its original natural number, will be named $C_D$ (you know what D stands for). We will name a HOF that was returned by $C_E$ a Church function, it's not a formal term, but it will make my sentences much shorter. 🙃
 
 Now, we should define addition and multiplication on Church Numbers. The operations should preserve the encoding. That means, we want to fulfill this equation:
 $$C_E(n+m)=C_E(n)+C_E(m)$$
 The notations here are a bit tricky.
-The plus sign in the left side represents an addition between two natural numbers. The result of this addition is mapped to a Church function by C*E.  
+The plus sign in the left side represents an addition between two natural numbers. The result of this addition is mapped to a Church function by $C_E$.  
 What happened in the right side is we apply $C_E$ for each number, $n$ and $m$, separately, and then sum the results, the Church functions that represent $n$ and $m$. The addition in the right hand isn't the regular addition for natural numbers, it's an addition between Church functions. We should define it, and we are going to do so:  
-The result of $C_n+C_m$ should be the function \$C*{n+m}$, the Church function who takes two parameters, $f$ and $x$, and returns $f$ applied on $x$, $n+m$ times. In the same way we will define the multiplication between Church functions. The result of $C*n\*C_m$ is $C*{n\*m}\$.
+The result of $C_n+C_m$ should be the function $C*{n+m}$, the Church function who takes two parameters, $f$ and $x$, and returns $f$ applied on $x$, $n+m$ times. In the same way we will define the multiplication between Church functions. The result of $C_n*C_m$ is $C_{n*m}$.
 
 In my opinion, this is a beautiful way to represents the natural numbers. The thing that [Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church) want to show in this encoding is that we can solve any computable by using _only functions_ as primitive types.  
 Obviously, we shouldn't use this representation in practice, as it is much cheaper to represent numbers in memory as bits than as functions.  
