@@ -41,7 +41,7 @@ So, we understood how the encoding maps a natural number to a HOF. But that was 
 The mapping works for both directions! 🥳
 
 Let's mark the function which maps a natural number $n$ to its corresponding $C_n$ HOF, as $C_E$ (E stands for encoding). We will name a HOF that was returned by $C_E$ a Church function, it's not a formal term, but it will make my sentences much shorter. 🙃
-The inverted function, which maps a Curch function to its original natural number, will be named $C_D$ (D stands for decoding). 
+The inverted function, which maps a Church function to its original natural number, will be named $C_D$ (D stands for decoding). 
 
 Now, we should define addition and multiplication on Church Numbers. The operations should preserve the encoding. That means, we want to fulfill this equation:
 $$C_E(n+m)=C_E(n)+C_E(m)$$
@@ -90,7 +90,9 @@ succ :: CNumber -> CNumber
 succ (Nr a) = Nr (\ f x -> f (a f x) )
 ```
 
-Assuming that `succ` receives a `CNumber` represents $n$. We define the result as a new function, which takes a function `f` and a value `x`. it is going to use `a` (the function that the given `CNumber` holds) to apply `f` on `x` $n$ times, and then apply `f` on the result once again. And so, we got the `CNumber` that represents $n+1$!  
+Given that `succ` receives a `CNumber` that represents $n$,
+we define the result as a new function, which takes a function `f` and a value `x`.
+The new function is going to use `a` (the function that the given `CNumber` holds) to apply `f` on `x` $n$ times, and then apply `f` on the result once again. And so, we got the `CNumber` that represents $n+1$!  
 A little note: if you want this code to compile, you should replace `import Prelude`, that usually appears on the top of the code, with `import Prelude hiding (succ)`, so the built-in function named `succ` won't collide ours.  
 Now, it will be much easier to define addition! We want a function named `add`, that receives two values of type `CNumber` and returns a `CNumber` that represents the addition of the Church functions that the parameters hold.
 
