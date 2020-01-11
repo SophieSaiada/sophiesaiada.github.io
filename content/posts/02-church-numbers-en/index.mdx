@@ -17,8 +17,8 @@ Let's talk about numbers. Not about the "regular" numbers we all know, but on an
 Church Encoding is a way to represent natural numbers as Higher Order Functions. **Higher order function** (HOF) is a function that receives functions as an input, or returns a function as an output. Those are functions who operate on functions.  
 As we understood what higher order functions are, let's define our encoding:  
 The encoding will match each natural number $n$ to a function, named $C_n$ which is defined in this way:  
-$C_n$ receives two parameters. The first is a function name $f$, who map some element of type $T$ to some element of type $T$. The second parameter is a value of type $T$, named $x$.  
-The function, $C_n$, will return the outcome of operating $f$ on $x$ $n$ times in chain. I mean, at the first time we will operate $f$ on $x$, then $f$ on $f(x)$ and so on $n$ times overall. If we want to write it formally, we will write it this way:
+$C_n$ receives two parameters. The first is a function name $f$, who maps some element of type $T$ to some element of type $T$. The second parameter is a value of type $T$, named $x$.  
+The function, $C_n$, will return the outcome of operating $f$ on $x$ $n$ times in a chain. I mean, at the first time we will operate $f$ on $x$, then $f$ on $f(x)$ and so on $n$ times overall. If we want to write it formally, we will write it this way:
 
 $$
 \begin{aligned}
@@ -32,7 +32,7 @@ $$
 Let's look on some examples, for the sake of making things less abstract:  
 We will define $f$ as $f(x)=2*x$, so in the next examples, the type $T$ we mentioned earlier, will be the Real Numbers ($\R$).
 
-- $C_0$ is the function that will be matched, by Church Encoding, to the natural number $0$. The result of $C_0(f,3)$ is $3$. Why? Because we applied $f$ of $3$ zero times overall, I mean, we didn’t applied $f$ at all, so we stayed with the original value, $3$. Generally speaking, the function $C_0$ returns her second parameter for any function $f$ and for any type $T$.
+- $C_0$ is the function that will be matched, by Church Encoding, to the natural number $0$. The result of $C_0(f,3)$ is $3$. Why? Because we applied $f$ of $3$ zero times overall, I mean, we didn’t apply $f$ at all, so we stayed with the original value, $3$. Generally speaking, the function $C_0$ returns her second parameter for any function $f$ and for any type $T$.
 - The result of $C_1(f,3)$ is $f(3)=2*3=6$.
 - The result of $C_2(f,3)$ is $f(f(3))=f(2*3)=2*(2*3)=12$.
 
