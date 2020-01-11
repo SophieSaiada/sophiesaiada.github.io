@@ -2,9 +2,10 @@
 import { jsx, Styled } from "theme-ui";
 import { Flex } from "@theme-ui/components";
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
+import Language from "../../../lang";
 
-const Footer = () => {
-  const { siteTitle } = useSiteMetadata();
+const Footer = ({ lang }) => {
+  const { siteTitle, siteTitleEn } = useSiteMetadata();
 
   return (
     <Flex
@@ -21,17 +22,18 @@ const Footer = () => {
       }}
     >
       <div>
-        &copy; {siteTitle}, {new Date().getFullYear()}
+        &copy; {lang == Language.he ? siteTitle : siteTitleEn},{" "}
+        {new Date().getFullYear()}
       </div>
       <div>
         <Styled.a
           aria-label="Link to the theme's GitHub repository"
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
         >
-          עיצוב
+          {lang == Language.he ? "עיצוב" : "Theme"}
         </Styled.a>
         {` `}
-        מאת
+        {lang == Language.he ? "מאת" : "by"}
         {` `}
         <Styled.a
           aria-label="Link to the theme author's website"

@@ -9,6 +9,7 @@ module.exports = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `סופיה ציאדה`,
+    siteTitleEn: `Sophia Saiada`,
     // Default title of the page
     siteTitleAlt: `סופיה ציאדה`,
     // Can be used for e.g. JSONLD
@@ -36,15 +37,15 @@ module.exports = {
     ],
     navigation: [
       {
-        title: `עמוד ראשי`,
+        title: {he: `עמוד ראשי`, en: `Home`},
         slug: `/`
       },
       {
-        title: `פוסטים`,
+        title: {he: `פוסטים`, en: `Blog`},
         slug: `/blog`
       },
       {
-        title: `קצת עליי`,
+        title: {he: `קצת עליי`, en: `About`},
         slug: `/about`
       }
     ],

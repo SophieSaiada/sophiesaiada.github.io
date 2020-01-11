@@ -17,7 +17,7 @@
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-minimal-blog": "https://github.com/SophiaSaiada/gatsby-theme-minimal-blog.git",
+    "@lekoarts/gatsby-theme-minimal-blog": "git+https://github.com/SophiaSaiada/gatsby-theme-minimal-blog.git",
     "@lekoarts/gatsby-theme-minimal-blog-core": "git+https://github.com/SophiaSaiada/gatsby-theme-minimal-blog-core.git",
     "disqus-react": "^1.0.7",
     "gatsby": "^2.13.3",
@@ -34,6 +34,7 @@
     "katex": "^0.11.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-with-direction": "^1.3.1",
     "remark-html-katex": "^2.0.0",
     "remark-math": "^2.0.0"
   },

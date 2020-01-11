@@ -10,6 +10,10 @@ import {
   HighlightInnerProps,
   Language
 } from "@lekoarts/gatsby-theme-minimal-blog/src/types";
+import withDirection, {
+  withDirectionPropTypes,
+  DIRECTIONS
+} from "react-with-direction";
 import "../styles/prism-atom-dark.css";
 import launchIcon from "../../../images/icons/launch-24px.svg";
 
@@ -21,6 +25,7 @@ type CodeProps = {
   language: Language;
   noLineNumbers?: boolean;
   metastring?: string;
+  direction: string;
   [key: string]: any;
 };
 
@@ -88,6 +93,7 @@ const Code = ({
   noLineNumbers = false,
   className: blockClassName,
   metastring = ``,
+  direction,
   ...props
 }: CodeProps) => {
   const { showLineNumbers } = useSiteMetadata();
@@ -155,12 +161,15 @@ const Code = ({
             </pre>
           </div>
           {gitLink && (
-            <a
-              className="gatsby-highlight--github--container"
-              href={gitLink}
-            >
-              <img src={launchIcon} />
-              לקוד המלא ב-GitHub
+            <a className="gatsby-highlight--github--container" href={gitLink}>
+              <img
+                src={launchIcon}
+                style={{
+                  marginLeft: direction == DIRECTIONS.RTL ? ".5em" : "none",
+                  marginRight: direction == DIRECTIONS.LTR ? ".5em" : "none"
+                }}
+              />
+              {direction == DIRECTIONS.RTL ? "לקוד המלא ב-GitHub" : "GitHub"}
             </a>
           )}
         </React.Fragment>
@@ -168,5 +177,7 @@ const Code = ({
     </LazyHighlight>
   );
 };
-
-export default Code;
+Code.propTypes = {
+  ...withDirectionPropTypes
+};
+export default withDirection(Code);

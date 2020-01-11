@@ -65,7 +65,6 @@ export default {
     textDecoration: "none",
     img: {
       height: "0.75rem",
-      ml: 1
     },
     "&:hover": {
       textDecoration: "underline"

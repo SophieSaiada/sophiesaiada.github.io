@@ -36,6 +36,7 @@ const useSiteMetadata = () => {
       site {
         siteMetadata {
           siteTitle
+          siteTitleEn
           siteTitleAlt
           siteHeadline
           siteUrl

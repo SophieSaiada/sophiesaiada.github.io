@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import { Text, Grid, Box } from "@theme-ui/components";
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
 import "./grid-posts.css";
+import Language from "../lang";
 
 type ListingProps = {
   posts: {
@@ -15,6 +16,7 @@ type ListingProps = {
     title: string;
     date: string;
     banne: object;
+    lang: string;
     tags?: {
       name: string;
       slug: string;
@@ -57,6 +59,7 @@ const Listing = ({
               as={"a"}
               href={post.slug}
               key={post.slug}
+              style={{ direction: post.lang == Language.he ? "rtl" : "ltr" }}
               className={`post-grid--item ${
                 multipleColumns ? "with-image" : "without-image"
               }`}

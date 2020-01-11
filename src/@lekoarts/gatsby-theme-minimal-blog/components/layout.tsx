@@ -8,10 +8,15 @@ import Footer from "@lekoarts/gatsby-theme-minimal-blog/src/components/footer";
 import CodeStyles from "@lekoarts/gatsby-theme-minimal-blog/src/styles/code";
 import SkipNavLink from "@lekoarts/gatsby-theme-minimal-blog/src/components/skip-nav";
 import "../../../style/main.css";
+import Language from "../../../lang";
 
-type LayoutProps = { children: React.ReactNode; className?: string };
+type LayoutProps = {
+  children: React.ReactNode;
+  className?: string;
+  lang?: Language;
+};
 
-const Layout = ({ children, className }: LayoutProps) => (
+const Layout = ({ children, className, lang = Language.he }: LayoutProps) => (
   <Styled.root data-testid="theme-root">
     <Global
       styles={css({
@@ -38,11 +43,11 @@ const Layout = ({ children, className }: LayoutProps) => (
     <SEO />
     <SkipNavLink>Skip to content</SkipNavLink>
     <Container>
-      <Header />
+      <Header lang={lang} />
       <Main id="skip-nav" css={css({ ...CodeStyles })} className={className}>
         {children}
       </Main>
-      <Footer />
+      <Footer lang={lang} />
     </Container>
   </Styled.root>
 );
