@@ -48,7 +48,11 @@ const Listing = ({
               as={Link}
               to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}
               className="post-grid--item--tag"
-              style={{ color: "white" }}
+              style={{
+                color: "white",
+                marginLeft: post.lang == Language.he ? "0.5em" : "none",
+                marginRight: post.lang == Language.he ? "none" : "0.5em"
+              }}
             >
               {tag.name}
             </Styled.a>
