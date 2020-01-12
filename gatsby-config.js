@@ -47,6 +47,10 @@ module.exports = {
       {
         title: { he: `קצת עליי`, en: `About` },
         slug: { he: `/about`, en: `/about` }
+      },
+      {
+        title: { he: `צרו קשר`, en: `Contact` },
+        slug: { he: `/contact`, en: `/contact` }
       }
     ],
     basePath: "/",
