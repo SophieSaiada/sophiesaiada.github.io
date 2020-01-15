@@ -3,8 +3,8 @@
 <url> <loc>https://sophiasa.dev/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sophiasa.dev/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sophiasa.dev/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sophiasa.dev/blog/church-numbers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sophiasa.dev/blog/church-numbers/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/blog/church-numbers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sophiasa.dev/blog/graphs-and-penguins/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sophiasa.dev/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sophiasa.dev/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
