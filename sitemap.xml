@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>http://localhost:8000/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/blog/church-numbers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/blog/church-numbers/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/blog/graphs-and-penguins/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/tags/haskell</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/tags/kotlin</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/tags/אלגוריתמים</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/tags/גרפים</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8000/tags/מתמטיקה</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/blog/church-numbers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/blog/church-numbers/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/blog/graphs-and-penguins/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/tags/haskell</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/tags/kotlin</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/tags/אלגוריתמים</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/tags/גרפים</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sophiasa.dev/tags/מתמטיקה</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
