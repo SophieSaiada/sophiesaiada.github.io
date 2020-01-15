@@ -15,9 +15,9 @@ module.exports = {
     // Can be used for e.g. JSONLD
     siteHeadline: `סופיה ציאדה`,
     // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `http://localhost:8000`,
+    siteUrl: `https://sophiasa.dev`,
     // Used for SEO
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteDescription: `Sophia Saiada, Full Stack (web & mobile) Developer`,
     // Will be set on the <html /> tag
     siteLanguage: `he`,
     // Used for og:image and must be placed inside the `static` folder
