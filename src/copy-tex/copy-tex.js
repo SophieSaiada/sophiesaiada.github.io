@@ -1,8 +1,6 @@
 import katexReplaceWithTex from "./katex2tex";
 
 export default event => {
-  console.log(event);
-
   const selection = window.getSelection();
   if (selection.isCollapsed) {
     return; // default action OK if selection is empty
