@@ -12,6 +12,7 @@ import DirectionProvider, {
 } from "react-with-direction/dist/DirectionProvider";
 import "katex/dist/katex.min.css";
 import Language from "../../../lang";
+import copyHandler from "../../../copy-tex/copy-tex";
 
 type PostProps = {
   data: {
@@ -80,6 +81,7 @@ const Post = ({ data: { post } }: PostProps) => {
           )}
         </p>
         <section
+          onCopy={copyHandler}
           sx={{
             my: 5
           }}
