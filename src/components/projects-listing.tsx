@@ -19,7 +19,7 @@ type ListingProps = {
 const ProjectsListing = ({ projects }: ListingProps) => (
   <section sx={{ mb: [3, 4, 5] }}>
     {projects.map(project => (
-      <Box mb={4} className="project">
+      <Box mb={4} className="project" key={project.url}>
         <Styled.a
           as={"a"}
           href={project.url}
@@ -36,7 +36,7 @@ const ProjectsListing = ({ projects }: ListingProps) => (
           className="project--description"
           dangerouslySetInnerHTML={{ __html: project.description }}
         ></div>
-        <p
+        <div
           sx={{
             color: `secondary`,
             mt: 1,
@@ -62,7 +62,7 @@ const ProjectsListing = ({ projects }: ListingProps) => (
               {project.stars} GitHub Stars
             </div>
           )}
-        </p>
+        </div>
       </Box>
     ))}
   </section>

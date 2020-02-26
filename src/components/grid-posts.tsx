@@ -10,18 +10,20 @@ import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replac
 import "./grid-posts.css";
 import Language from "../lang";
 
-type ListingProps = {
-  posts: {
+export type Post = {
+  slug: string;
+  title: string;
+  date: string;
+  banne: object;
+  lang: string;
+  tags?: {
+    name: string;
     slug: string;
-    title: string;
-    date: string;
-    banne: object;
-    lang: string;
-    tags?: {
-      name: string;
-      slug: string;
-    }[];
   }[];
+}
+
+type ListingProps = {
+  posts: Post[];
   className?: string;
   showTags?: boolean;
   limitPostWhenSingleColumn?: boolean;
@@ -46,6 +48,7 @@ const Listing = ({
           const tags = post.tags.map(tag => (
             <Styled.a
               as={Link}
+              key={tag.slug}
               to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}
               className="post-grid--item--tag"
               style={{

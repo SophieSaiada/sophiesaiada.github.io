@@ -8,19 +8,11 @@ import Title from "@lekoarts/gatsby-theme-minimal-blog/src/components/title";
 import List from "@lekoarts/gatsby-theme-minimal-blog/src/components/list";
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
-import GridPosts from "../../../components/grid-posts";
+import GridPosts, { Post } from "../../../components/grid-posts";
 import ProjectsListing from "../../../components/projects-listing";
 
 type PostsProps = {
-  posts: {
-    slug: string;
-    title: string;
-    date: string;
-    tags?: {
-      name: string;
-      slug: string;
-    }[];
-  }[];
+  posts: Post[];
 };
 
 const Homepage = ({ posts }: PostsProps) => {

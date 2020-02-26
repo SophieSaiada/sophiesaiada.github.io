@@ -27,7 +27,7 @@ const Navigation = ({ nav, lang }: NavigationProps) => {
     >
       {nav.map(item => (
         <Styled.a
-          key={item.slug}
+          key={item.slug.he + "," + item.slug.en}
           as={Link}
           activeClassName="active"
           to={replaceSlashes(
