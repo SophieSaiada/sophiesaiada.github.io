@@ -94,10 +94,11 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
-              quality: 90,
+              quality: 100,
               linkImagesToOriginal: true
             }
-          }
+          },
+          "gatsby-remark-copy-relative-linked-files"
         ]
       }
     },

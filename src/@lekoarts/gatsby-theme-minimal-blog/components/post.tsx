@@ -36,6 +36,9 @@ type PostProps = {
           };
         };
       };
+      css?: {
+        relativePath: string;
+      };
     };
   };
 };
@@ -48,7 +51,9 @@ const Post = ({ data: { post } }: PostProps) => {
     shortname: "sophiasaiada",
     config: { identifier: post.slug, title: post.title }
   };
-
+  if (post.css?.relativePath) {
+    require("../../../../content/posts/" + post.css?.relativePath);
+  }
   return (
     <DirectionProvider
       direction={post.lang == "he" ? DIRECTIONS.RTL : DIRECTIONS.LTR}

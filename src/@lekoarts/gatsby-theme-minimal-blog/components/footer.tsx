@@ -30,10 +30,10 @@ const Footer = ({ lang }) => {
           aria-label="Link to the theme's GitHub repository"
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
         >
-          {lang == Language.he ? "עיצוב" : "Theme"}
+          Theme
         </Styled.a>
         {` `}
-        {lang == Language.he ? "מאת" : "by"}
+        by
         {` `}
         <Styled.a
           aria-label="Link to the theme author's website"

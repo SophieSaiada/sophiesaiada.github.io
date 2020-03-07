@@ -44,6 +44,11 @@ export default {
       background: `#d46586`,
       color: `black`
     },
+    'pre[class~="language-python"]:before': {
+      content: `"Python"`,
+      background: `#ffd44b`,
+      color: `black`
+    },
     'pre[class*="language-"]:before': {
       ...style[".gatsby-highlight"]['pre[class*="language-"]:before'],
       textTransform: `none`
