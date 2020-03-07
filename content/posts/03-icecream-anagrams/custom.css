@@ -1,0 +1,36 @@
+[data-taste] {
+  padding: 0.1em 0.2em;
+  border-radius: 0.25em;
+  color: var(--theme-ui-colors-text,#2d3748);
+  border: 1px solid #00000021;
+}
+
+[data-taste="תות"] {
+  background-color: #fa83aa;
+}
+[data-taste="ענבים"] {
+  background-color: #e39bef;
+}
+[data-taste="קפה"] {
+  background-color: #d9c1a3;
+}
+[data-taste="וניל"] {
+  background-color: #fef8e0;
+}
+[data-taste="מסטיק"] {
+  background-color: #ffbdfa;
+}
+[data-taste="בננה"] {
+  background-color: #feec94;
+}
+
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
