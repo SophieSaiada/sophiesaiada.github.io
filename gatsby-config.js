@@ -18,6 +18,7 @@ module.exports = {
     siteUrl: `https://sophiasa.dev`,
     // Used for SEO
     siteDescription: `Sophia Saiada, Full Stack (web & mobile) Developer`,
+    keywords: `Sophia Saiada,סופיה ציאדה, מפתחת,מפתח,פול סטאק,מתכנת,מתכנתת,Full Stack Developer,Full Stack,Developer,Mobile,Web,React,ReactJS,iOS,Android,Kotlin,Python,Swift,Software Engineer`,
     // Will be set on the <html /> tag
     siteLanguage: `he`,
     // Used for og:image and must be placed inside the `static` folder

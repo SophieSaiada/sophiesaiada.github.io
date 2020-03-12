@@ -8,6 +8,7 @@ type Props = {
       siteHeadline: string;
       siteUrl: string;
       siteDescription: string;
+      keywords: string;
       siteLanguage: string;
       siteImage: string;
       author: string;
@@ -41,6 +42,7 @@ const useSiteMetadata = () => {
           siteHeadline
           siteUrl
           siteDescription
+          keywords
           siteLanguage
           siteImage
           author
