@@ -22,7 +22,7 @@ const Header = ({ lang }) => {
   };
 
   return (
-    <header sx={{ mb: [5, 6] }}>
+    <header sx={{ mb: [4, 5] }}>
       <Flex
         sx={{ mb: 2, alignItems: `center`, justifyContent: `space-between` }}
       >
