@@ -1,5 +1,4 @@
 import style from "@lekoarts/gatsby-theme-minimal-blog/src/gatsby-plugin-theme-ui/index";
-import { tailwind } from "@theme-ui/presets";
 
 const secularOne = `'Secular One', sans-serif`;
 const assistant = `'Assistant', sans-serif`;
@@ -15,12 +14,12 @@ export default {
   },
   colors: {
     ...style.colors,
-    primary: tailwind.colors.pink[6],
+    primary: "#9c27b0",
     modes: {
       ...style.colors.modes,
       dark: {
         ...style.colors.modes.dark,
-        primary: tailwind.colors.pink[6]
+        primary: "#9c27b0"
       }
     }
   },
