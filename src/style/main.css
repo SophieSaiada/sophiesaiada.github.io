@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Secular+One&display=swap');
+
 code {
   direction: ltr;
   display: inline-block;
 }
+
 ol ol {
   margin-right: -1rem;
 }
+
 ol ol ol {
   list-style-type: lower-alpha;
 }
+
 .math-display {
   overflow-x: auto;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2")
+      format("woff2"),
+    url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

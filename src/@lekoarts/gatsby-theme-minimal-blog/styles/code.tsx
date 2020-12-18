@@ -5,10 +5,10 @@ export default {
   ...style,
   ".math": {
     direction: "ltr",
-    fontSize: [1, 1, 2]
+    fontSize: [1, 1, 2],
   },
   ".math-inline": {
-    display: "inline-block"
+    display: "inline-block",
   },
   "p > code, li > code": {
     bg: `#f3f4f4`,
@@ -18,11 +18,14 @@ export default {
     px: 2,
     py: 1,
     mx: 1,
-    fontFamily: `'Fira Code', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`
+    fontFamily: `'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`,
+    "-webkit-font-feature-settings": `"liga" on, "calt" on`,
+    "-webkit-font-smoothing": "antialiased",
+    textRendering: "optimizeLegibility",
   },
   ".preview-image-container": {
     mx: -3,
-    borderRadius: [`0`, `3px`]
+    borderRadius: [`0`, `3px`],
   },
   ".gatsby-highlight": {
     ...style[".gatsby-highlight"],
@@ -33,26 +36,29 @@ export default {
       "0px 4px 5px -2px rgba(0, 0, 0, 0.1), 0px 7px 10px 1px rgba(0, 0, 0, 0.07), 0px 2px 16px 1px rgba(0, 0, 0, 0.06)",
     backgroundColor: "#1a1a1a",
     "&.with-github-link": {
-      borderRadius: [`0`, `3px 3px 0 0`]
+      borderRadius: [`0`, `3px 3px 0 0`],
     },
     pre: {
       ...style[".gatsby-highlight"]["pre"],
-      fontFamily: `'Fira Code', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`
+      fontFamily: `'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`,
+      "-webkit-font-feature-settings": `"liga" on, "calt" on`,
+      "-webkit-font-smoothing": "antialiased",
+      textRendering: "optimizeLegibility",
     },
     'pre[class~="language-kotlin"]:before': {
       content: `"Kotlin"`,
       background: `#d46586`,
-      color: `black`
+      color: `black`,
     },
     'pre[class~="language-python"]:before': {
       content: `"Python"`,
       background: `#ffd44b`,
-      color: `black`
+      color: `black`,
     },
     'pre[class*="language-"]:before': {
       ...style[".gatsby-highlight"]['pre[class*="language-"]:before'],
-      textTransform: `none`
-    }
+      textTransform: `none`,
+    },
   },
   ".gatsby-highlight--github--container": {
     borderRadius: [`0`, `0 0 3px 3px`],
@@ -72,7 +78,7 @@ export default {
       height: "0.75rem",
     },
     "&:hover": {
-      textDecoration: "underline"
-    }
-  }
+      textDecoration: "underline",
+    },
+  },
 };

@@ -135,25 +135,6 @@ module.exports = {
     `gatsby-plugin-netlify`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Assistant`,
-            subsets: [`hebrew`, `latin`],
-            variants: [`400`, `600`]
-          },
-          {
-            family: `Secular One`,
-            subsets: [`hebrew`, `latin`]
-          },
-          {
-            family: `Fira Code`,
-            subsets: [`latin-ext`, `latin`]
-          }
-        ]
-      }
-    }
+    `gatsby-plugin-preload-fonts`,
   ]
 };
