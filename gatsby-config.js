@@ -8,17 +8,17 @@ const postsPath = `./content/posts`;
 module.exports = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
-    siteTitle: `סופיה ציאדה`,
-    siteTitleEn: `Sophia Saiada`,
+    siteTitle: `סופי ציאדה`,
+    siteTitleEn: `Sophie Saiada`,
     // Default title of the page
-    siteTitleAlt: `סופיה ציאדה`,
+    siteTitleAlt: `סופי ציאדה`,
     // Can be used for e.g. JSONLD
-    siteHeadline: `סופיה ציאדה`,
+    siteHeadline: `סופי ציאדה`,
     // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://sophiasa.dev`,
+    siteUrl: `https://sophies.dev`,
     // Used for SEO
-    siteDescription: `Sophia Saiada, Full Stack (web & mobile) Developer`,
-    keywords: `Sophia Saiada,סופיה ציאדה, מפתחת,מפתח,פול סטאק,מתכנת,מתכנתת,Full Stack Developer,Full Stack,Developer,Mobile,Web,React,ReactJS,iOS,Android,Kotlin,Python,Swift,Software Engineer`,
+    siteDescription: `Sophie Saiada, Full Stack (web & mobile) Developer`,
+    keywords: `Sophie Saiada,סופי ציאדה, מפתחת,מפתח,פול סטאק,מתכנת,מתכנתת,Full Stack Developer,Full Stack,Developer,Mobile,Web,React,ReactJS,iOS,Android,Kotlin,Python,Swift,Software Engineer`,
     // Will be set on the <html /> tag
     siteLanguage: `he`,
     // Used for og:image and must be placed inside the `static` folder
@@ -121,10 +121,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Sophia Saiada`,
-        short_name: `SophiaSaiada`,
+        name: `Sophie Saiada`,
+        short_name: `SophieSaiada`,
         start_url: `/`,
-        description: `Sophia Saiada, Full Stack (web & mobile) Developer`,
+        description: `Sophie Saiada, Full Stack (web & mobile) Developer`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
         display: `standalone`,
