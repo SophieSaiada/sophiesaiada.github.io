@@ -1,0 +1,11 @@
+# Commands to start on workspace startup
+tasks:
+  - name: Setup & Build
+    init: npm ci
+
+# Ports to expose on workspace startup
+ports:
+  - port: 3000
+    onOpen: open-preview
+    name: Website
+    description: Website Preview
