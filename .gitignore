@@ -1,3 +1,4 @@
+.env
 
 packages/*/yarn.lock
 packages/*/package-lock.json

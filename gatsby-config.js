@@ -2,18 +2,14 @@ require(`dotenv`).config({
   path: `.env`
 });
 
-const pagesPath = `./content/pages`;
-const postsPath = `./content/posts`;
-
 module.exports = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
-    siteTitle: `סופי ציאדה`,
-    siteTitleEn: `Sophie Saiada`,
+    siteTitle: `Sophie Saiada`,
     // Default title of the page
     siteTitleAlt: `סופי ציאדה`,
     // Can be used for e.g. JSONLD
-    siteHeadline: `סופי ציאדה`,
+    siteHeadline: `Sophie Saiada`,
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://sophies.dev`,
     // Used for SEO
@@ -25,41 +21,6 @@ module.exports = {
     siteImage: `/banner.jpg`,
     // Twitter Handle
     author: `@SophiaSa`,
-    // Links displayed in the header on the right side
-    externalLinks: [
-      {
-        name: `GitHub`,
-        url: `https://github.com/SophiaSaiada/`
-      },
-      {
-        name: `LinkedIn`,
-        url: `https://www.linkedin.com/in/sophia-saiada/`
-      }
-    ],
-    navigation: [
-      {
-        title: { he: `עמוד ראשי`, en: `Home` },
-        slug: { he: `/`, en: `/` }
-      },
-      {
-        title: { he: `פוסטים`, en: `Blog` },
-        slug: { he: `/blog`, en: `/blog` }
-      },
-      {
-        title: { he: `קצת עליי`, en: `About` },
-        slug: { he: `/about`, en: `/about` }
-      },
-      {
-        title: { he: `צרו קשר`, en: `Contact` },
-        slug: { he: `/contact`, en: `/contact` }
-      }
-    ],
-    basePath: "/",
-    blogPath: "/blog",
-    tagsPath: "/tags",
-    pagesPath,
-    postsPath,
-    showLineNumbers: true,
     projects: [
       {
         name: "Gödel",
@@ -89,8 +50,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        remarkPlugins: [require("remark-math"), require("remark-html-katex")],
         gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -99,7 +66,7 @@ module.exports = {
               linkImagesToOriginal: true
             }
           },
-          "gatsby-remark-copy-relative-linked-files"
+          "gatsby-remark-copy-linked-files"
         ]
       }
     },
@@ -107,8 +74,39 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
         mdx: false,
-        pagesPath,
-        postsPath
+        // Links displayed in the header on the right side
+        basePath: "/",
+        blogPath: "/blog",
+        tagsPath: "/tags",
+        showLineNumbers: true,
+        externalLinks: [
+          {
+            name: `GitHub`,
+            url: `https://github.com/SophiaSaiada/`
+          },
+          {
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/sophia-saiada/`
+          }
+        ],
+        navigation: [
+          {
+            title: `Home`,
+            slug: `/`
+          },
+          {
+            title: `Blog`,
+            slug: `/blog`
+          },
+          {
+            title: `About Me`,
+            slug: `/about`
+          },
+          {
+            title: `Contact`,
+            slug: `/contact`
+          }
+        ]
       }
     },
     {

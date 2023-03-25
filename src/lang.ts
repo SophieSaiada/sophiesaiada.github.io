@@ -1,6 +1,2 @@
-enum Language {
-  he = "he",
-  en = "en"
-}
-
-export default Language;
+export const getDirection = (content: string) =>
+  /[\u05D0-\u05EB]/.test(content) ? "rtl" : "ltr";

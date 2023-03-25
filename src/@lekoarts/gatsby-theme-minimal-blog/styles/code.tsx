@@ -1,18 +1,17 @@
 import style from "@lekoarts/gatsby-theme-minimal-blog/src/styles/code";
-import iconLaunch from "../../../images/icons/launch-24px.svg";
 
 export default {
   ...style,
   ".math": {
     direction: "ltr",
-    fontSize: [1, 1, 2],
+    fontSize: [1, 1, 2]
   },
   ".math-inline": {
-    display: "inline-block",
+    display: "inline-block"
   },
   "p > code, li > code": {
-    bg: `#f3f4f4`,
-    color: `#476582`,
+    background: "var(--theme-ui-colors-plain-backgroundColor)",
+    color: "var(--theme-ui-colors-heading)",
     borderRadius: `3px`,
     fontSize: ".75em",
     px: 2,
@@ -21,11 +20,11 @@ export default {
     fontFamily: `'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`,
     "-webkit-font-feature-settings": `"liga" on, "calt" on`,
     "-webkit-font-smoothing": "antialiased",
-    textRendering: "optimizeLegibility",
+    textRendering: "optimizeLegibility"
   },
   ".preview-image-container": {
     mx: -3,
-    borderRadius: [`0`, `3px`],
+    borderRadius: [`0`, `3px`]
   },
   ".gatsby-highlight": {
     ...style[".gatsby-highlight"],
@@ -36,29 +35,35 @@ export default {
       "0px 4px 5px -2px rgba(0, 0, 0, 0.1), 0px 7px 10px 1px rgba(0, 0, 0, 0.07), 0px 2px 16px 1px rgba(0, 0, 0, 0.06)",
     backgroundColor: "#1a1a1a",
     "&.with-github-link": {
-      borderRadius: [`0`, `3px 3px 0 0`],
+      borderRadius: [`0`, `3px 3px 0 0`]
     },
-    pre: {
-      ...style[".gatsby-highlight"]["pre"],
+    code: {
+      ...style[".gatsby-highlight"]["code"],
+      fontSize: "1rem",
       fontFamily: `'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`,
       "-webkit-font-feature-settings": `"liga" on, "calt" on`,
       "-webkit-font-smoothing": "antialiased",
-      textRendering: "optimizeLegibility",
+      textRendering: "optimizeLegibility"
     },
     'pre[class~="language-kotlin"]:before': {
       content: `"Kotlin"`,
       background: `#d46586`,
-      color: `black`,
+      color: `black`
+    },
+    'pre[class~="language-hs"]:before': {
+      content: `"Haskell"`,
+      background: `#949494`,
+      color: `black`
     },
     'pre[class~="language-python"]:before': {
       content: `"Python"`,
       background: `#ffd44b`,
-      color: `black`,
+      color: `black`
     },
     'pre[class*="language-"]:before': {
       ...style[".gatsby-highlight"]['pre[class*="language-"]:before'],
-      textTransform: `none`,
-    },
+      textTransform: `none`
+    }
   },
   ".gatsby-highlight--github--container": {
     borderRadius: [`0`, `0 0 3px 3px`],
@@ -67,7 +72,8 @@ export default {
       "0px 4px 5px -2px rgba(0, 0, 0, 0.1), 0px 7px 10px 1px rgba(0, 0, 0, 0.07), 0px 2px 16px 1px rgba(0, 0, 0, 0.06)",
     zIndex: 2,
     position: "relative",
-    background: "#fbfbfb",
+    background: "var(--theme-ui-colors-plain-backgroundColor)",
+    color: "var(--theme-ui-colors-heading)",
     px: 3,
     py: 2,
     fontSize: "0.75rem",
@@ -75,10 +81,10 @@ export default {
     alignItems: "center",
     textDecoration: "none",
     img: {
-      height: "0.75rem",
+      height: "0.75rem"
     },
     "&:hover": {
-      textDecoration: "underline",
-    },
-  },
+      textDecoration: "underline"
+    }
+  }
 };

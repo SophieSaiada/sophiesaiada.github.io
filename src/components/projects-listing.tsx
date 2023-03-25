@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import React from "react";
-import { jsx, Styled } from "theme-ui";
+import { jsx } from "theme-ui";
 import { Box } from "@theme-ui/components";
 import { Link } from "gatsby";
 import ItemTags from "@lekoarts/gatsby-theme-minimal-blog/src/components/item-tags";
 import "./projects-listing.css";
 
-type ListingProps = {
+export type ListingProps = {
   projects: {
     name: string;
     description: string;
@@ -20,13 +20,12 @@ const ProjectsListing = ({ projects }: ListingProps) => (
   <section sx={{ mb: [3, 4, 5] }}>
     {projects.map(project => (
       <Box mb={4} className="project" key={project.url}>
-        <Styled.a
-          as={"a"}
+        <a
           href={project.url}
           sx={{ fontWeight: `semibold`, fontSize: [2, 2, 3], color: `text` }}
         >
           {project.name}
-        </Styled.a>
+        </a>
         {project.stars && (
           <div className="project--stars" sx={{ display: ["none", "block"] }}>
             {project.stars} GitHub Stars
