@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import useWindowSize from "../hooks/window-size";
-import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
+import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-minimal-blog-config";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
 import { Text, Grid } from "@theme-ui/components";
@@ -22,7 +22,7 @@ const Listing = ({
   limitPostWhenSingleColumn = false
 }: ListingProps) => {
   const [width, _] = useWindowSize();
-  const { basePath, tagsPath } = useSiteMetadata();
+  const { basePath, tagsPath } = useMinimalBlogConfig();
   const numberOfColumns = width >= 980 ? 3 : width >= 700 ? 2 : 1;
   const multipleColumns = numberOfColumns > 1;
   const limitedPosts =
