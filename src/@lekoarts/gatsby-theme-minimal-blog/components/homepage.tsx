@@ -98,7 +98,8 @@ const Homepage = (_: MBHomepageProps) => {
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <section
         sx={{
-          mb: [5, 6, 7],
+          mt: [-3, -3, -4],
+          mb: [5, 6, 6],
           p: { fontSize: [1, 2, 3], mt: 2 },
           variant: `section_hero`
         }}
@@ -114,8 +115,8 @@ const Homepage = (_: MBHomepageProps) => {
       <List>
         <Bottom />
       </List>
-      <Title text="פרויקטים">
-        <a href="https://github.com/SophiaSaiada">ל-GitHub</a>
+      <Title text="Projects">
+        <a href="https://github.com/SophiaSaiada">GitHub</a>
       </Title>
       <ProjectsListing projects={projects} />
       <List>

@@ -13,7 +13,7 @@
   cursor: default;
 }
 .project--tag:first-of-type {
-  margin-right: 0;
+  margin-left: 0;
 }
 .project--stars {
   direction: ltr;
@@ -27,11 +27,13 @@
 }
 .project--description {
   white-space: pre-wrap;
+  line-height: 1.75;
+  margin: .5em 0;
 }
 
 .project {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1),
     0px 5px 8px 0px rgba(0, 0, 0, 0.07), 0px 1px 14px 0px rgba(0, 0, 0, 0.06);
-  padding: 1em;
+  padding: 1.2em 1.5em;
   border-radius: 0.25em;
 }

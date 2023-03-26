@@ -25,24 +25,37 @@ module.exports = {
       {
         name: "Gödel",
         description:
-          "שפת תכנות שפיתחתי בתור פרויקט גמר לתואר.<br />מכילה מאפיינים של שפות מונחות עצמים ושפות פונקציונליות.",
+        `
+An interpreted programming language that I developed as a final project for a bachelor's degree.  
+Written in Kotlin and its syntax resembles Kotlin's one.  
+Includes a CFG-parser generator (like Java's Bison) that I wrote from scratch.
+        `,
         url: "https://github.com/SophiaSaiada/Godel",
-        tags: ["Kotlin", "Meta Programming", "אלגוריתמים"]
+        tags: ["Kotlin", "Meta Programming", "Algorithms"]
       },
       {
         name: "vue-conversational-form",
-        description:
-          'קומפוננטת Vue.js שמאפשרת להפוך טפסים לשיחות צ\'אט.<br />מימוש מחדש של הפרויקט ה<a href="https://github.com/space10-community/conversational-form">זה<a/> בתור Higher-Order-Component של Vue.js.</a>',
-        url: "https://github.com/SophiaSaiada/vue-conversational-form",
-        stars: 38,
-        tags: ["Vue.js", "Front-End"]
-      },
-      {
-        name: "vue-scala-calculator",
-        description:
-          "פרויקט קטן של מימוש מחשבון מדעי ב-Scala.js ו-Vue.js.<br />המחשבון מראה את ה-AST&rlm; (Abstract Syntax Tree) של הביטוי, ומאפשר לחשב את הערך הסופי עם אנימציה נחמדה.<br />זה למעשה היה הפרויקט שהוביל אותי לפתח את שפת התכנות Gödel (שניהם מכילים Parsing של ביטויים, אבל ב-Gödel זה יותר מורכב).",
+        description: `
+A Vue.js component that turns web forms into conversations.
+It's an implementation of <a href="https://github.com/space10-community/conversational-form">another open-source project<a/> as Vue's Higher-Order-Component.
+Check out a live demo <a href="https://sophies.dev/vue-conversational-form/">here</a>.
+`,
+url: "https://github.com/SophiaSaiada/vue-conversational-form",
+stars: 48,
+tags: ["Vue.js", "Front-End"]
+},
+{
+  name: "vue-scala-calculator",
+  description: `
+A basic math expressions parser and evaluator.
+It displays the AST (Abstract Syntax Tree) of the expression, and then evaluates each sub-tree in DFS order.
+The algorithms that parse and evaluate the expressions are written in Scala (and exposed to Vue via Scala.js).
+The calculator UI and the AST-viewer are written in Vue.js.
+It was, in fact, the base for Gödel, as both projects parse and evaluate expressions.
+Check out a live demo <a href="https://sophies.dev/vue-scala-calculator/">here</a>.
+        `,
         url: "https://github.com/SophiaSaiada/vue-scala-calculator",
-        tags: ["Scala", "Vue.js", "אלגוריתמים"]
+        tags: ["Scala", "Vue.js", "Algorithms"]
       }
     ]
   },

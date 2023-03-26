@@ -19,10 +19,16 @@ export type ListingProps = {
 const ProjectsListing = ({ projects }: ListingProps) => (
   <section sx={{ mb: [3, 4, 5] }}>
     {projects.map(project => (
-      <Box mb={4} className="project" key={project.url}>
+      <Box mb={4} className="project" key={project.url} sx={{p: 2}}>
         <a
           href={project.url}
-          sx={{ fontWeight: `semibold`, fontSize: [2, 2, 3], color: `text`, textDecoration: "none" }}
+          sx={{
+            fontWeight: `semibold`,
+            fontSize: [2, 2, 3],
+            color: `text`,
+            textDecoration: "none",
+            "&:hover": { textDecoration: "underline" }
+          }}
         >
           {project.name}
         </a>
@@ -33,7 +39,10 @@ const ProjectsListing = ({ projects }: ListingProps) => (
         )}
         <div
           className="project--description"
-          dangerouslySetInnerHTML={{ __html: project.description }}
+          dangerouslySetInnerHTML={{ __html: project.description
+            .split("\n")
+            .filter((l) => l.trim())
+            .join("\n") }}
         ></div>
         <div
           sx={{
@@ -52,14 +61,6 @@ const ProjectsListing = ({ projects }: ListingProps) => (
                 </div>
               ))}
             </React.Fragment>
-          )}
-          {project.stars && (
-            <div
-              className="project--tag"
-              sx={{ display: ["inline-block", "none"], direction: "ltr" }}
-            >
-              {project.stars} GitHub Stars
-            </div>
           )}
         </div>
       </Box>
