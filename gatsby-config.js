@@ -7,7 +7,7 @@ module.exports = {
     // Used for the title template on pages other than the index site
     siteTitle: `Sophie Saiada`,
     // Default title of the page
-    siteTitleAlt: `סופי ציאדה`,
+    siteTitleAlt: `Sophie Saiada`,
     // Can be used for e.g. JSONLD
     siteHeadline: `Sophie Saiada`,
     // Will be used to generate absolute URLs for og:image etc.
