@@ -18,8 +18,8 @@ export type ListingProps = {
 
 const ProjectsListing = ({ projects }: ListingProps) => (
   <section sx={{ mb: [3, 4, 5] }}>
-    {projects.map(project => (
-      <Box mb={4} className="project" key={project.url} sx={{p: 2}}>
+    {projects.map((project) => (
+      <Box mb={4} className="project" key={project.url}>
         <a
           href={project.url}
           sx={{
@@ -39,10 +39,12 @@ const ProjectsListing = ({ projects }: ListingProps) => (
         )}
         <div
           className="project--description"
-          dangerouslySetInnerHTML={{ __html: project.description
-            .split("\n")
-            .filter((l) => l.trim())
-            .join("\n") }}
+          dangerouslySetInnerHTML={{
+            __html: project.description
+              .split("\n")
+              .filter((l) => l.trim())
+              .join("\n")
+          }}
         ></div>
         <div
           sx={{
