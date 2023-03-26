@@ -64,7 +64,7 @@ const Listing = ({
               )}
               <div className="post-grid--item--content">
                 {multipleColumns && tags}
-                <Text as={"div"} sx={{ fontFamily: `heading`, fontSize: 2 }}>
+                <Text as={"div"} sx={{ fontFamily: `heading`, fontSize: 2, fontWeight: "700" }}>
                   {post.title}
                 </Text>
                 {multipleColumns || tags}

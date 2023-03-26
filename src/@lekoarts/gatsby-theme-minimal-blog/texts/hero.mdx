@@ -1,27 +1,18 @@
-import WordChanger from "../../../components/WordChanger.js"
-import { Link } from "gatsby"
-import '../../../style/cta-button.scss'
-import emailIcon from '../../../images/icons/email-24px.svg'
+import { Link } from "gatsby";
+import { Box, Heading } from "theme-ui";
+import "../../../style/cta-button.scss";
+import emailIcon from "../../../images/icons/email-24px.svg";
 
-<Text sx={{ fontFamily: `heading`, fontSize: [4, 5, 6], color: `heading` }}>
-    <Text sx={{mb: -4}}>
-    היי, אני סופי,
-    </Text>
-    <WordChanger prefix="מפתחת " words={[
-        {color: "#29b1d6", word: "React"},
-        {color: "#9c27b0", word: "Full-Stack"},
-        {color: "#1976d2", word: "iOS"},
-        {color: "#d19600", word: "Python"},
-        {color: "#689f38", word: "Android"},
-    ]} />
+<Text variant='hero' sx={{ color: `heading`, lineHeight: "115%" }}>
+<Box sx={{ }}>Hi,</Box>
+<Box sx={{ }}>I'm <Box as="span" sx={{ background: "-webkit-linear-gradient(0deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%)",    "-webkit-background-clip": "text",    "-webkit-text-fill-color": "transparent"  }}>Sophie Saiada</Box>,</Box>
+<Box sx={{  background: "-webkit-linear-gradient(0deg, #9c27b0 0%, #9819ae 100%)",    "-webkit-background-clip": "text",    "-webkit-text-fill-color": "transparent"   }}>  Senior Web Developer</Box>
 </Text>
-
-<p>  
-    מפתחת Full-Stack ב-iOS, Android וב-Web עם ניסיון של שנתיים.<br />
-    ב-2019 סיימתי תואר ראשון במדעי המחשב ומתמטיקה בהצטיינות (96.77).<br />
-    חובבת גרפים ואלגוריתמים מאז 2017 ✨<br />
+<p >
+    I have a passion for big-picture thinking and continuous learning.  
+    Really into diversity and inclusion, and also volunteer as a guide with IGY.  
 </p>
 <Link to="/contact/" className="cta-button">
-    <img src={emailIcon} className="cta-button--icon"/>
-    צרו קשר
+  <img src={emailIcon} className="cta-button--icon" />
+  <Text as="span">Contact Me</Text>
 </Link>

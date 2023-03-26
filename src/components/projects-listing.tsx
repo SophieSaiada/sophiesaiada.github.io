@@ -22,7 +22,7 @@ const ProjectsListing = ({ projects }: ListingProps) => (
       <Box mb={4} className="project" key={project.url}>
         <a
           href={project.url}
-          sx={{ fontWeight: `semibold`, fontSize: [2, 2, 3], color: `text` }}
+          sx={{ fontWeight: `semibold`, fontSize: [2, 2, 3], color: `text`, textDecoration: "none" }}
         >
           {project.name}
         </a>

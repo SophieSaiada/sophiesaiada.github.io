@@ -39,6 +39,8 @@ const Post: React.FC<
   }
   // MOD END
 
+  const isRTL = (props.pageContext.frontmatter.lang || "he") === "he";
+
   return (
     <PostBase
       {...props}
@@ -47,16 +49,15 @@ const Post: React.FC<
         children && (
           <span
             onCopy={copyHandler}
-            dir={
-              (props.pageContext.frontmatter.lang || "he") === "he"
-                ? "rtl"
-                : "ltr"
-            }
+            dir={isRTL ? "rtl" : "ltr"}
             sx={{
               ".gatsby-resp-image-wrapper": {
                 margin: "auto !important",
                 boxShadow: "unset !important"
-              }
+              },
+              "p, li": isRTL
+                ? { fontFamily: "'Assistant', sans-serif" }
+                : { lineHeight: 1.85 }
             }}
           >
             {children}
