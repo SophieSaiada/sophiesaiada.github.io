@@ -23,7 +23,7 @@ const theme = merge(style, {
   },
   text: {
     hero: {
-      fontSize: "3.5rem",
+      fontSize: [5, 7, 7],
       fontFamily: "Sora",
       fontWeight: 700,
       letterSpacing: "-0.06em"

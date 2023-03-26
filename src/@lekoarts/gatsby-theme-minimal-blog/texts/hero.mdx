@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import { Box, Heading } from "theme-ui";
-import "../../../style/cta-button.scss";
+import CTA from "../../../components/cta";
 import emailIcon from "../../../images/icons/email-24px.svg";
 
 <Text variant='hero' sx={{ color: `heading`, lineHeight: "115%" }}>
@@ -12,7 +12,4 @@ import emailIcon from "../../../images/icons/email-24px.svg";
     I have a passion for big-picture thinking and continuous learning.  
     Really into diversity and inclusion, and also volunteer as a guide with IGY.  
 </p>
-<Link to="/contact/" className="cta-button">
-  <img src={emailIcon} className="cta-button--icon" />
-  <Text as="span">Contact Me</Text>
-</Link>
+<CTA text="Contact Me" icon={emailIcon} to="/contact/" />

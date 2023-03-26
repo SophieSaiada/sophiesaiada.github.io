@@ -2,7 +2,7 @@
 title: קצת (טוב אולי לא קצת) עליי
 slug: "/about"
 ---
-import '../../../src/style/cta-button.scss'
+import CTA from "../../../src/components/cta";
 import downloadIcon from '../../../src/images/icons/download-24px.svg';
 
 היי, קוראים לי סופי, כמו שכתוב למעלה במה שמתיימר להיות לוגו.  
@@ -25,7 +25,4 @@ import downloadIcon from '../../../src/images/icons/download-24px.svg';
 מעצבת גרפית,  
 ורואה סדרות שאף אחד בארץ לא מכיר (אבל זה לא רלוונטי לניסיון התעסוקתי שלי 😊).
 <br/>
-<a href="/Sophia Saiada CV.pdf" className="cta-button">
-    <img src={downloadIcon} className="cta-button--icon"/>
-    <Text as="span">Resume</Text>
-</a>
+<CTA text="Resume" icon={downloadIcon} to="/Sophia Saiada CV.pdf" gatsbyLink />
