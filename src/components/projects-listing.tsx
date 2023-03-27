@@ -56,7 +56,7 @@ const ProjectsListing = ({ basePath, projects }: ListingProps) => {
                   {project.stars} GitHub Stars
                 </div>
               )}
-              <div
+              <Box
                 className="project--description"
                 dangerouslySetInnerHTML={{
                   __html: project.description
@@ -65,7 +65,20 @@ const ProjectsListing = ({ basePath, projects }: ListingProps) => {
                     .map((l) => l.trimStart())
                     .join("\n")
                 }}
-              ></div>
+                sx={{
+                  a: {
+                    color: `primary`,
+                    textDecoration: `none`,
+                    ":hover": {
+                      color: `heading`,
+                      textDecoration: `underline`
+                    },
+                    ":focus": {
+                      color: `heading`
+                    }
+                  }
+                }}
+              ></Box>
             </div>
             <div
               className="project--tags"

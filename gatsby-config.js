@@ -38,7 +38,7 @@ module.exports = {
         image: "vue-conversational-form.gif",
         description: `
         A Vue.js component that turns web forms into conversations.
-        It's an implementation of <a href="https://github.com/space10-community/conversational-form">another open-source project<a/> as Vue's Higher-Order-Component.
+        It's an implementation of <a href="https://github.com/space10-community/conversational-form">another open-source project</a> as Vue's Higher-Order-Component.
         Check out a live demo <a href="https://sophies.dev/vue-conversational-form/">here</a>.
         `,
         url: "https://github.com/SophiaSaiada/vue-conversational-form",

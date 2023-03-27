@@ -11,9 +11,10 @@
   display: inline-block;
   background: white;
   cursor: default;
-}
-.project--tag:first-of-type {
   margin-left: 0;
+}
+.project--tag:last-of-type {
+  margin-right: 0;
 }
 .project--stars {
   direction: ltr;
