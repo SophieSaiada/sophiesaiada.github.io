@@ -30,6 +30,7 @@ const useProjectsAndPosts = () => {
         siteMetadata {
           projects {
             name
+            image
             description
             url
             stars
@@ -118,7 +119,7 @@ const Homepage = (_: MBHomepageProps) => {
       <Title text="Projects">
         <a href="https://github.com/SophiaSaiada">GitHub</a>
       </Title>
-      <ProjectsListing projects={projects} />
+      <ProjectsListing basePath={basePath} projects={projects} />
       <List>
         <Bottom />
       </List>

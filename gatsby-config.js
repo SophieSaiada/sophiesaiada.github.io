@@ -24,30 +24,32 @@ module.exports = {
     projects: [
       {
         name: "Gödel",
-        description:
-        `
-An interpreted programming language that I developed as a final project for a bachelor's degree.  
-Written in Kotlin and its syntax resembles Kotlin's one.  
-Includes a CFG-parser generator (like Java's Bison) that I wrote from scratch.
+        image: "godel.gif",
+        description: `
+        An interpreted programming language that I developed as a final project for a bachelor's degree.  
+        Written in Kotlin and its syntax resembles Kotlin's one.  
+        Includes a CFG-parser generator (like Java's Bison) that I wrote from scratch.
         `,
         url: "https://github.com/SophiaSaiada/Godel",
         tags: ["Kotlin", "Meta Programming", "Algorithms"]
       },
       {
         name: "vue-conversational-form",
+        image: "vue-conversational-form.gif",
         description: `
-A Vue.js component that turns web forms into conversations.
-It's an implementation of <a href="https://github.com/space10-community/conversational-form">another open-source project<a/> as Vue's Higher-Order-Component.
-Check out a live demo <a href="https://sophies.dev/vue-conversational-form/">here</a>.
-`,
-url: "https://github.com/SophiaSaiada/vue-conversational-form",
-stars: 48,
-tags: ["Vue.js", "Front-End"]
-},
-{
-  name: "vue-scala-calculator",
-  description: `
-A basic math expressions parser and evaluator.
+        A Vue.js component that turns web forms into conversations.
+        It's an implementation of <a href="https://github.com/space10-community/conversational-form">another open-source project<a/> as Vue's Higher-Order-Component.
+        Check out a live demo <a href="https://sophies.dev/vue-conversational-form/">here</a>.
+        `,
+        url: "https://github.com/SophiaSaiada/vue-conversational-form",
+        stars: 48,
+        tags: ["Vue.js", "Front-End"]
+      },
+      {
+        name: "vue-scala-calculator",
+        image: "vue-scala-calculator.gif",
+        description: `
+        A basic math expressions parser and evaluator.
 It displays the AST (Abstract Syntax Tree) of the expression, and then evaluates each sub-tree in DFS order.
 The algorithms that parse and evaluate the expressions are written in Scala (and exposed to Vue via Scala.js).
 The calculator UI and the AST-viewer are written in Vue.js.
@@ -146,6 +148,6 @@ Check out a live demo <a href="https://sophies.dev/vue-scala-calculator/">here</
     `gatsby-plugin-netlify`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-preload-fonts`
   ]
 };
