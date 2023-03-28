@@ -101,7 +101,7 @@ Check out a live demo <a href="https://sophies.dev/vue-scala-calculator/">here</
           },
           {
             name: `LinkedIn`,
-            url: `https://www.linkedin.com/in/sophia-saiada/`
+            url: `https://www.linkedin.com/in/sophie-saiada/`
           }
         ],
         navigation: [
