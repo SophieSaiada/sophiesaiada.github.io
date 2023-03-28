@@ -29,7 +29,7 @@ const Listing = ({
     !multipleColumns && limitPostWhenSingleColumn ? posts.slice(0, 5) : posts;
 
   return (
-    <section sx={{ mb: [2, 3, 4] }} className={className}>
+    <section sx={{ mb: 5 }} className={className}>
       <Grid gap={20} className="post-grid" columns={[numberOfColumns]}>
         {limitedPosts.map((post) => {
           const tags = (post.tags ?? []).map((tag) => (
@@ -37,10 +37,16 @@ const Listing = ({
               key={tag.slug}
               to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}
               className="post-grid--item--tag"
-              style={{
-                color: "white",
-                marginLeft: false ? "0.5em" : "none",
-                marginRight: false ? "none" : "0.5em"
+              sx={{
+                color: `secondary`,
+                textDecoration: `none`,
+                ":hover": {
+                  color: `heading`,
+                  textDecoration: `underline`
+                },
+                ":focus": {
+                  color: `heading`
+                }
               }}
             >
               {tag.name}
