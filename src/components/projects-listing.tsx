@@ -23,7 +23,7 @@ const ProjectsListing = ({ basePath, projects }: ListingProps) => {
   const multipleColumns = numberOfColumns > 1;
 
   return (
-    <section sx={{ mb: [3, 4, 5] }}>
+    <section sx={{ mb: 4 }}>
       <Grid gap={20} className="post-grid" columns={[numberOfColumns]}>
         {projects.map((project) => (
           <Box mb={4} className="project" key={project.url}>

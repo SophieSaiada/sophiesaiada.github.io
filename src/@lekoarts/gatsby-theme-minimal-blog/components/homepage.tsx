@@ -113,16 +113,11 @@ const Homepage = (_: MBHomepageProps) => {
         </Link>
       </Title>
       <GridPosts posts={posts} showTags={false} limitPostWhenSingleColumn />
-      <List>
-        <Bottom />
-      </List>
       <Title text="Projects">
         <a href="https://github.com/SophiaSaiada">GitHub</a>
       </Title>
       <ProjectsListing basePath={basePath} projects={projects} />
-      <List>
-        <Bottom />
-      </List>
+      <Bottom />
     </Layout>
   );
 };

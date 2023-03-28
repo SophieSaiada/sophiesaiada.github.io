@@ -11,7 +11,6 @@ const Footer = () => {
         boxSizing: `border-box`,
         display: `flex`,
         justifyContent: `space-between`,
-        mt: [6],
         color: `secondary`,
         a: {
           variant: `links.secondary`
@@ -21,6 +20,7 @@ const Footer = () => {
       }}
     >
       <div>
+        {/* MOD: shorten copyright, add link to LinkedIn */}
         &copy; {new Date().getFullYear()} {siteTitle} &#8901;{" "}
         <Link
           aria-label="LinkedIn"
