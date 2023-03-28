@@ -18,8 +18,8 @@ export default {
     py: 1,
     mx: 1,
     fontFamily: `'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`,
-    "-webkit-font-feature-settings": `"liga" on, "calt" on`,
-    "-webkit-font-smoothing": "antialiased",
+    WebkitFontFeatureSettings: `"liga" on, "calt" on`,
+    WebkitFontSmoothing: "antialiased",
     textRendering: "optimizeLegibility"
   },
   ".preview-image-container": {
@@ -41,8 +41,8 @@ export default {
       ...style[".gatsby-highlight"]["code"],
       fontSize: "1rem",
       fontFamily: `'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace`,
-      "-webkit-font-feature-settings": `"liga" on, "calt" on`,
-      "-webkit-font-smoothing": "antialiased",
+      WebkitFontFeatureSettings: `"liga" on, "calt" on`,
+      WebkitFontSmoothing: "antialiased",
       textRendering: "optimizeLegibility"
     },
     'pre[class~="language-kotlin"]:before': {
