@@ -20,10 +20,10 @@ const HeaderTitle = () => {
         letterSpacing: "-0.06em",
         background:
           "linear-gradient(270deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%)",
-        "-webkit-background-clip": "text",
-        "-webkit-text-fill-color": "transparent",
-        "background-clip": "text",
-        "text-fill-color": "transparent"
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+        textFillColor: "transparent"
       }}
     >
       <div sx={{ my: 0, fontWeight: `semibold`, fontSize: [3, 4] }}>
