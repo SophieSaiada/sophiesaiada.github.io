@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment } from "react";
 import { useColorMode } from "theme-ui";
 
 const ColorModeToggle = () => {
   const [_colorMode, setColorMode] = useColorMode<"light" | "dark">();
-  setColorMode("light");
+  useEffect(() => {
+    setColorMode("light");
+  }, []);
   return <Fragment />;
 };
 
