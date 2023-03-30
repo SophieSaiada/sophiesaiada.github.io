@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksophia_saiada=self.webpackChunksophia_saiada||[]).push([[197],{7138:function(e,a,n){n.r(a),n.d(a,{Head:function(){return r.F},default:function(){return c}});var t=n(7294),u=n(9330),r=n(2657);function c(e){return t.createElement(r.Z,e,t.createElement(u.default,e))}r.Z}}]);
+//# sourceMappingURL=component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-posts-01-graphs-and-penguins-index-mdx-3597583477b0de4fe0c4.js.map
