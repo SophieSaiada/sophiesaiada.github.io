@@ -74,7 +74,7 @@ const Listing = ({
                   {post.title}
                 </Text>
                 {multipleColumns || tags}
-                <Text>{post.date}</Text>
+                <Text as={"div"}>{post.date}</Text>
               </div>
             </a>
           );
