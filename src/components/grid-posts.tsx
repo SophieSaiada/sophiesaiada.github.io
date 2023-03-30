@@ -57,23 +57,18 @@ const Listing = ({
             <a
               href={post.slug}
               key={post.slug}
-              className={`post-grid--item ${
-                multipleColumns ? "with-image" : "without-image"
-              }`}
+              className={`post-grid--item with-image`}
             >
-              {multipleColumns && (
-                <Img
-                  fluid={post.banner.childImageSharp.fluid}
-                  className="post-grid--item--image"
-                  style={{aspectRatio: 1.5}}
-                />
-              )}
+              <Img
+                fluid={post.banner.childImageSharp.fluid}
+                className="post-grid--item--image"
+                style={{ aspectRatio: multipleColumns ? 1.5 : 2.5 }}
+              />
               <div className="post-grid--item--content">
-                {multipleColumns && tags}
+                {tags}
                 <Text as={"div"} sx={{ fontFamily: `heading`, fontSize: 2, fontWeight: "700" }}>
                   {post.title}
                 </Text>
-                {multipleColumns || tags}
                 <Text as={"div"}>{post.date}</Text>
               </div>
             </a>

@@ -17,9 +17,6 @@
 .post-grid--item--content {
   padding: 1em;
 }
-.post-grid--item.without-image .post-grid--item--content {
-  padding: 2em;
-}
 .post-grid--item--tag {
   padding: 0.25rem 0.5rem;
   margin: 0.25rem;
