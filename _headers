@@ -7,9 +7,9 @@
   Referrer-Policy: same-origin
 /styles.967c93f0e71136acdc7b.css
   Cache-Control: public, max-age=31536000, immutable
-/commons-11c98e24dd55756fa895.js
+/commons-345473081acf0afb9870.js
   Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx-d73dc3e4a4705a85a17e.js
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx-679b2d6afabab0388d23.js
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-blog-query-tsx-8565ffc1012771e48b3f.js
   Cache-Control: public, max-age=31536000, immutable
@@ -37,7 +37,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tag-query-tsx-d9cd35cdf17310ef4143.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-85bce071fa23dd1ca57a.js
+/webpack-runtime-ebba63198fae49df5e7d.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-881d3290a1a6a4328055.js
   Cache-Control: public, max-age=31536000, immutable
