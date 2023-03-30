@@ -24,6 +24,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} {siteTitle} &#8901;{" "}
         <Link
           aria-label="LinkedIn"
+          target="_blank"
           href="https://www.linkedin.com/in/sophie-saiada/"
         >
           LinkedIn
