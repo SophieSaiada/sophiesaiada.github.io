@@ -38,6 +38,7 @@ const ProjectsListing = ({ basePath, projects }: ListingProps) => {
             <div className="project-grid--item--content">
               <a
                 href={project.url}
+                target="_blank"
                 sx={{
                   fontWeight: `semibold`,
                   fontSize: [2, 2, 3],

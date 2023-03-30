@@ -38,8 +38,8 @@ module.exports = {
         image: "vue-conversational-form.gif",
         description: `
         A Vue.js component that turns web forms into conversations.
-        It's an implementation of <a href="https://github.com/space10-community/conversational-form">another open-source project</a> as Vue's Higher-Order-Component.
-        Check out a live demo <a href="https://sophies.dev/vue-conversational-form/">here</a>.
+        It's an implementation of <a target="_blank" href="https://github.com/space10-community/conversational-form">another open-source project</a> as Vue's Higher-Order-Component.
+        Check out a live demo <a target="_blank" href="https://sophies.dev/vue-conversational-form/">here</a>.
         `,
         url: "https://github.com/SophiaSaiada/vue-conversational-form",
         stars: 48,
@@ -54,7 +54,7 @@ It displays the AST (Abstract Syntax Tree) of the expression, and then evaluates
 The algorithms that parse and evaluate the expressions are written in Scala (and exposed to Vue via Scala.js).
 The calculator UI and the AST-viewer are written in Vue.js.
 It was, in fact, the base for Gödel, as both projects parse and evaluate expressions.
-Check out a live demo <a href="https://sophies.dev/vue-scala-calculator/">here</a>.
+Check out a live demo <a target="_blank" href="https://sophies.dev/vue-scala-calculator/">here</a>.
         `,
         url: "https://github.com/SophiaSaiada/vue-scala-calculator",
         tags: ["Scala", "Vue.js", "Algorithms"]
