@@ -33,6 +33,7 @@ const Footer = () => {
       <div>
         <Link
           aria-label="Link to the theme's GitHub repository"
+          target="_blank"
           href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog"
         >
           Theme
@@ -42,6 +43,7 @@ const Footer = () => {
         {` `}
         <Link
           aria-label="Link to the theme author's website"
+          target="_blank"
           href="https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Theme"
         >
           LekoArts
