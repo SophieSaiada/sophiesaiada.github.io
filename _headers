@@ -5,7 +5,7 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-/styles.1e21fa73943ac9920eb2.css
+/styles.6187668d43aa39ef3243.css
   Cache-Control: public, max-age=31536000, immutable
 /commons-dce61914f1295cd8a0f5.js
   Cache-Control: public, max-age=31536000, immutable
@@ -37,7 +37,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tag-query-tsx-d9cd35cdf17310ef4143.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-c2b8bade231d2af62362.js
+/webpack-runtime-95c209de9ee01f6ba09d.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-881d3290a1a6a4328055.js
   Cache-Control: public, max-age=31536000, immutable
