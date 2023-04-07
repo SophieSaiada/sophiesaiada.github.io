@@ -101,7 +101,7 @@ const Homepage = (_: MBHomepageProps) => {
         sx={{
           mt: [-3, -3, -4],
           mb: [5, 6, 6],
-          p: { fontSize: [1, 2, 3], mt: 2 },
+          p: { fontSize: ["1.1rem", "1.25rem", "1.25rem"], mt: 2 },
           variant: `section_hero`
         }}
       >
