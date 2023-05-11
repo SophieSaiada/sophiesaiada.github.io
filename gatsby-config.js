@@ -125,9 +125,9 @@ Check out a live demo <a target="_blank" href="https://sophies.dev/vue-scala-cal
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
+        trackingIds: [process.env.GOOGLE_ANALYTICS_ID]
       }
     },
     `gatsby-plugin-sitemap`,
