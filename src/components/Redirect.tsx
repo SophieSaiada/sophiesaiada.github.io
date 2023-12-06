@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 
 export default function Redirect({ to }) {
   useEffect(() => {
-    navigate(to);
+    navigate(to, { replace: true });
   }, []);
   return null;
 }
