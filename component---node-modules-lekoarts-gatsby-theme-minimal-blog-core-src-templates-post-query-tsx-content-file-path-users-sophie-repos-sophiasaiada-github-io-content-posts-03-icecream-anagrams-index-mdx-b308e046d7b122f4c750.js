@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksophia_saiada=self.webpackChunksophia_saiada||[]).push([[751],{6530:function(e,a,n){n.r(a),n.d(a,{Head:function(){return r.F},default:function(){return c}});var t=n(7294),u=n(555),r=n(2657);function c(e){return t.createElement(r.Z,e,t.createElement(u.default,e))}r.Z}}]);
+//# sourceMappingURL=component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-posts-03-icecream-anagrams-index-mdx-b308e046d7b122f4c750.js.map
