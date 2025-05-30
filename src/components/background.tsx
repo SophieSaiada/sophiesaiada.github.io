@@ -1,17 +1,18 @@
 import React, { useEffect, useRef, useCallback } from "react";
 
 const config = {
-  particleColor: "#FF00FF", // Default particle color (Magenta)
-  maxParticles: 85, // Fixed particle count
-  baseSpeed: 0.5, // Adjusted base speed
-  wiggleStrength: 3, // Slightly reduced wiggle
-  maxParallaxOffset: 25, // Max potential shift for parallax
-  yParallaxFactor: 0.2, // Y-axis parallax is 20% of X-axis
+  particleColor: "#FF00FF",
+  desktopMaxParticles: 85, // Max particles for desktop
+  mobileMaxParticles: 40, // Reduced max particles for mobile
+  baseSpeed: 0.5,
+  wiggleStrength: 3,
+  maxParallaxOffset: 25,
+  yParallaxFactor: 0.2,
   minParticleSize: 12,
   maxParticleSize: 22,
-  maxBaseShadowBlur: 12, // For least reactive particles (higher blur)
-  minBaseShadowBlur: 6, // For most reactive particles (lower blur)
-  shadowPulseAmount: 3 // How much the shadow blur pulses
+  maxBaseShadowBlur: 12,
+  minBaseShadowBlur: 6,
+  shadowPulseAmount: 3
 };
 
 const characters = ["S", "O", "P", "H", "I", "E"];
@@ -22,7 +23,6 @@ interface RGB {
   b: number;
 }
 
-// Helper to convert hex to RGB
 function hexToRgb(hex: string): RGB {
   let bigint = parseInt(hex.slice(1), 16);
   let r = (bigint >> 16) & 255;
@@ -31,7 +31,6 @@ function hexToRgb(hex: string): RGB {
   return { r, g, b };
 }
 
-// Particle class
 class Particle {
   private canvasWidth: number;
   private canvasHeight: number;
@@ -103,7 +102,7 @@ class Particle {
       this.baseShadowBlur + Math.sin(this.glowPhase) * config.shadowPulseAmount;
     ctx.shadowColor = config.particleColor;
 
-    ctx.font = `${this.size}px 'Elder Magic', cursive`;
+    ctx.font = `${this.size}px 'Elder Magic', cursive`; // Using 'Elder Magic' font
     const particleRgb: RGB = hexToRgb(config.particleColor);
     ctx.fillStyle = `rgba(${particleRgb.r}, ${particleRgb.g}, ${particleRgb.b}, ${this.opacity})`;
     ctx.textAlign = "center";
@@ -148,28 +147,25 @@ const FloatingRunesAnimation: React.FC = () => {
 
   const parallaxOffsetXRef = useRef<number>(0);
   const parallaxOffsetYRef = useRef<number>(0);
-  // Initialize with a default or null, to be set in useEffect
-  const canvasWidthRef = useRef<number>(0); 
+  const canvasWidthRef = useRef<number>(0);
   const canvasHeightRef = useRef<number>(0);
+  // Ref to store the effective max particles based on device
+  const effectiveMaxParticlesRef = useRef<number>(config.desktopMaxParticles);
 
   const initParticles = useCallback((): void => {
-    // Ensure canvas dimensions are set before initializing particles
     if (canvasWidthRef.current === 0 || canvasHeightRef.current === 0) {
-        // Fallback if called before resizeCanvas has set dimensions (e.g., initial call)
-        // This might happen if initParticles is called outside of resizeCanvas context initially.
-        // However, resizeCanvas is called first in useEffect, so this should be safe.
-        if (typeof window !== "undefined") {
-            canvasWidthRef.current = window.innerWidth;
-            canvasHeightRef.current = window.innerHeight;
-        } else {
-            // SSR fallback if absolutely necessary, though resizeCanvas should handle it
-            canvasWidthRef.current = 1920; // A common desktop width
-            canvasHeightRef.current = 1080; // A common desktop height
-        }
+      if (typeof window !== "undefined") {
+        canvasWidthRef.current = window.innerWidth;
+        canvasHeightRef.current = window.innerHeight;
+      } else {
+        canvasWidthRef.current = 1920;
+        canvasHeightRef.current = 1080;
+      }
     }
 
     particlesRef.current = [];
-    for (let i = 0; i < config.maxParticles; i++) {
+    // Use the effectiveMaxParticlesRef for the loop limit
+    for (let i = 0; i < effectiveMaxParticlesRef.current; i++) {
       particlesRef.current.push(
         new Particle(
           canvasWidthRef.current,
@@ -179,20 +175,22 @@ const FloatingRunesAnimation: React.FC = () => {
         )
       );
     }
-  }, []);
+  }, []); // No dependencies needed as it reads from refs
 
   const resizeCanvas = useCallback((): void => {
-    canvasWidthRef.current = window.innerWidth;
-    canvasHeightRef.current = window.innerHeight;
-    if (canvasRef.current) {
-      canvasRef.current.width = canvasWidthRef.current;
-      canvasRef.current.height = canvasHeightRef.current;
+    if (typeof window !== "undefined") {
+      canvasWidthRef.current = window.innerWidth;
+      canvasHeightRef.current = window.innerHeight;
+      if (canvasRef.current) {
+        canvasRef.current.width = canvasWidthRef.current;
+        canvasRef.current.height = canvasHeightRef.current;
+      }
     }
     initParticles();
   }, [initParticles]);
 
   const animate = useCallback((): void => {
-    if (!canvasRef.current || canvasWidthRef.current === 0) return; // Don't animate if canvas not ready
+    if (!canvasRef.current || canvasWidthRef.current === 0) return;
     const ctx = canvasRef.current.getContext("2d");
     if (!ctx) return;
 
@@ -207,7 +205,7 @@ const FloatingRunesAnimation: React.FC = () => {
   }, []);
 
   const handleMouseMove = useCallback((event: MouseEvent): void => {
-    if (canvasWidthRef.current === 0) return; // Ensure dimensions are set
+    if (canvasWidthRef.current === 0) return;
     const mouseNormX: number =
       (event.clientX - canvasWidthRef.current / 2) /
       (canvasWidthRef.current / 2);
@@ -221,25 +219,33 @@ const FloatingRunesAnimation: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    resizeCanvas(); 
-    animate();
+    if (typeof window !== "undefined") {
+      const isTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
-    const isTouchDevice =
-      "ontouchstart" in window || navigator.maxTouchPoints > 0;
-    if (!isTouchDevice) {
-      window.addEventListener("mousemove", handleMouseMove);
+      // Set effective particle count based on device type
+      effectiveMaxParticlesRef.current = isTouch
+        ? config.mobileMaxParticles
+        : config.desktopMaxParticles;
+
+      resizeCanvas();
+      animate();
+
+      // Only add mouse parallax for non-touch devices
+      if (!isTouch) {
+        window.addEventListener("mousemove", handleMouseMove);
+      }
+      window.addEventListener("resize", resizeCanvas);
+
+      return () => {
+        if (!isTouch) {
+          window.removeEventListener("mousemove", handleMouseMove);
+        }
+        window.removeEventListener("resize", resizeCanvas);
+        if (animationFrameIdRef.current) {
+          cancelAnimationFrame(animationFrameIdRef.current);
+        }
+      };
     }
-    window.addEventListener("resize", resizeCanvas);
-
-    return () => {
-      if (!isTouchDevice) {
-        window.removeEventListener("mousemove", handleMouseMove);
-      }
-      window.removeEventListener("resize", resizeCanvas);
-      if (animationFrameIdRef.current) {
-        cancelAnimationFrame(animationFrameIdRef.current);
-      }
-    };
   }, [animate, handleMouseMove, resizeCanvas]);
 
   return (
