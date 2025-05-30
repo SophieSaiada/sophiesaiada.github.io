@@ -62,6 +62,7 @@ Check out a live demo <a target="_blank" href="https://sophies.dev/vue-scala-cal
     ]
   },
   plugins: [
+    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
