@@ -148,10 +148,26 @@ const FloatingRunesAnimation: React.FC = () => {
 
   const parallaxOffsetXRef = useRef<number>(0);
   const parallaxOffsetYRef = useRef<number>(0);
-  const canvasWidthRef = useRef<number>(window.innerWidth);
-  const canvasHeightRef = useRef<number>(window.innerHeight);
+  // Initialize with a default or null, to be set in useEffect
+  const canvasWidthRef = useRef<number>(0); 
+  const canvasHeightRef = useRef<number>(0);
 
   const initParticles = useCallback((): void => {
+    // Ensure canvas dimensions are set before initializing particles
+    if (canvasWidthRef.current === 0 || canvasHeightRef.current === 0) {
+        // Fallback if called before resizeCanvas has set dimensions (e.g., initial call)
+        // This might happen if initParticles is called outside of resizeCanvas context initially.
+        // However, resizeCanvas is called first in useEffect, so this should be safe.
+        if (typeof window !== "undefined") {
+            canvasWidthRef.current = window.innerWidth;
+            canvasHeightRef.current = window.innerHeight;
+        } else {
+            // SSR fallback if absolutely necessary, though resizeCanvas should handle it
+            canvasWidthRef.current = 1920; // A common desktop width
+            canvasHeightRef.current = 1080; // A common desktop height
+        }
+    }
+
     particlesRef.current = [];
     for (let i = 0; i < config.maxParticles; i++) {
       particlesRef.current.push(
@@ -176,7 +192,7 @@ const FloatingRunesAnimation: React.FC = () => {
   }, [initParticles]);
 
   const animate = useCallback((): void => {
-    if (!canvasRef.current) return;
+    if (!canvasRef.current || canvasWidthRef.current === 0) return; // Don't animate if canvas not ready
     const ctx = canvasRef.current.getContext("2d");
     if (!ctx) return;
 
@@ -191,6 +207,7 @@ const FloatingRunesAnimation: React.FC = () => {
   }, []);
 
   const handleMouseMove = useCallback((event: MouseEvent): void => {
+    if (canvasWidthRef.current === 0) return; // Ensure dimensions are set
     const mouseNormX: number =
       (event.clientX - canvasWidthRef.current / 2) /
       (canvasWidthRef.current / 2);
@@ -204,7 +221,7 @@ const FloatingRunesAnimation: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    resizeCanvas();
+    resizeCanvas(); 
     animate();
 
     const isTouchDevice =
