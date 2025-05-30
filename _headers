@@ -5,7 +5,7 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-/styles.6187668d43aa39ef3243.css
+/styles.adfd6d506760ac16fc65.css
   Cache-Control: public, max-age=31536000, immutable
 /commons-e44e3f2e041a7ee84e32.js
   Cache-Control: public, max-age=31536000, immutable
@@ -21,7 +21,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /5cd98bac-34441b42e5874cc84a47.js
   Cache-Control: public, max-age=31536000, immutable
-/6adcf4a3d00bdf3d210aa22b2700e4c3c1104774-3eb664843252d7d2dcfa.js
+/6adcf4a3d00bdf3d210aa22b2700e4c3c1104774-376ec601df7f8ace082f.js
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-posts-03-icecream-anagrams-index-mdx-b308e046d7b122f4c750.js
   Cache-Control: public, max-age=31536000, immutable
@@ -31,23 +31,25 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-posts-01-graphs-and-penguins-index-mdx-007ef6cef5ff1377b19c.js
   Cache-Control: public, max-age=31536000, immutable
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-new-index-mdx-753e03a6b7c0c2bc62e3.js
+  Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-redirects-church-numbers-mdx-7598782fc844cc212628.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-redirects-graphs-and-penguins-mdx-6eefbcea96163decca84.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-contact-index-mdx-6f6f514e11e139bbe759.js
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-redirects-ice-cream-anagrams-mdx-b43fb532d15d84d43dd5.js
   Cache-Control: public, max-age=31536000, immutable
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-contact-index-mdx-6f6f514e11e139bbe759.js
+  Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-about-index-mdx-99f7333a06dbe0c4360e.js
   Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tag-query-tsx-03844f3de9d889de04f9.js
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-redirects-graphs-and-penguins-mdx-6eefbcea96163decca84.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-d2fba83ea5f6b0bd0772.js
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tag-query-tsx-3492cd32294b413eded7.js
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-939f5d7b77feeb81efef.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-881d3290a1a6a4328055.js
   Cache-Control: public, max-age=31536000, immutable
-/app-2ab3d558f911fc8959aa.js
+/app-5a72813d52a7b227be1c.js
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable
