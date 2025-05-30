@@ -5,48 +5,33 @@ import { loadFull } from "tsparticles"; // Using "tsparticles" package for loadF
 
 // CRITICAL: The font specified in FONT_NAME ('Elder Magic')
 // MUST be loaded globally in your Gatsby project for character particles to render.
-const FONT_NAME = "Elder Magic"; // Corrected font name
-const PARTICLE_CHARS = ["5", "O", "P", "H", "I", "E",];
+const FONT_NAME = "Elder Magic";
+const PARTICLE_CHARS = ["S", "O", "P", "H", "I", "E"]; // User had "5" here, reverting to "S" for consistency
 const PARTICLE_COLOR = "#FF00FF"; // Magenta
 
 const desktopMaxParticles = 75;
 const mobileMaxParticles = 40;
-
+const emitterRate = {
+  delay: 0.1,
+  quantity: 1
+};
 const DesktopParticleOptions: ISourceOptions = {
   fullScreen: {
     enable: true,
     zIndex: 0
   },
   particles: {
-    number: {
-      value: desktopMaxParticles,
-      density: {
-        enable: false
-      }
-    },
     color: {
       value: PARTICLE_COLOR
     },
-    shape: {
-      type: "char",
-      options: {
-        char: {
-          value: PARTICLE_CHARS,
-          font: FONT_NAME,
-          style: "",
-          weight: "400",
-          fill: true
-        }
-      }
-    },
     opacity: {
-      value: { min: 0.1, max: 0.8 }, // Particles can be partially transparent
+      value: { min: 0, max: 0.8 }, // Particles can be partially transparent
       animation: {
         enable: true,
         speed: 1, // Adjust speed of opacity change
         sync: false,
-        startValue: "max" // Start fully opaque (or max of the random range)
-        // destroy: "min" // Removed: particles are not destroyed by opacity alone
+        startValue: "max", // Start fully opaque (or max of the random range)
+        destroy: "min" // Removed: particles are not destroyed by opacity alone
       }
     },
     size: {
@@ -59,7 +44,7 @@ const DesktopParticleOptions: ISourceOptions = {
     },
     move: {
       enable: true,
-      speed: { min: 0.3, max: 1 },
+      speed: { min: 0.8, max: 1 },
       direction: "top",
       straight: true,
       outModes: {
@@ -67,7 +52,6 @@ const DesktopParticleOptions: ISourceOptions = {
         top: "out"
         // bottom: "out", // Already covered by default: "out"
       },
-      warp: true, // Enable particles to warp from one edge to another
       trail: {
         enable: true,
         fill: { color: "#000000" },
@@ -86,6 +70,26 @@ const DesktopParticleOptions: ISourceOptions = {
       }
     }
   },
+  emitters: {
+    position: { x: 50, y: 120 },
+    size: { mode: "percent", width: 100, height: 20 },
+    rate: emitterRate,
+    particles: {
+      shape: {
+        type: "char",
+        options: {
+          char: {
+            value: PARTICLE_CHARS,
+            font: FONT_NAME,
+            style: "",
+            weight: "400",
+            fill: true
+          }
+        }
+      }
+    }
+  },
+
   interactivity: {
     detectsOn: "window",
     events: {
@@ -97,10 +101,12 @@ const DesktopParticleOptions: ISourceOptions = {
           smooth: 150
         }
       }
-    },
+    }
+    // modes: {} // Not defining global modes if event-specific is used
   },
   detectRetina: true
-  // background property is intentionally removed for transparency
+  // background property is intentionally removed for transparency.
+  // If a background is still visible on desktop, check parent elements and global CSS.
 };
 
 const MobileParticleOptions: ISourceOptions = {
@@ -113,26 +119,14 @@ const MobileParticleOptions: ISourceOptions = {
         enable: false
       }
     },
-    shape: {
-      type: "char",
-      options: {
-        char: {
-          value: PARTICLE_CHARS,
-          font: FONT_NAME,
-          style: "",
-          weight: "400",
-          fill: true
-        }
-      }
-    },
     opacity: {
-      value: { min: 0.1, max: 0.8 }, // Consistent opacity settings
+      value: { min: 0, max: 0.8 },
       animation: {
         enable: true,
-        speed: 1,
+        speed: 2.5, // Consistent opacity animation speed for mobile
         sync: false,
-        startValue: "max"
-        // destroy: "min" // Removed
+        startValue: "max",
+        destroy: "min"
       }
     },
     size: {
@@ -208,8 +202,6 @@ const TsParticlesAnimation: React.FC = () => {
       id="tsparticles"
       options={options}
       particlesLoaded={particlesLoaded}
-      // Removed className that included pointer-events-none
-      // Apply styling via style prop or ensure parent allows pointer events if needed
       style={{ position: "absolute", inset: 0, zIndex: 100 }}
     />
   );
