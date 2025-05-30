@@ -5,7 +5,7 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-/styles.adfd6d506760ac16fc65.css
+/styles.3392fe0107d9a5ad1b90.css
   Cache-Control: public, max-age=31536000, immutable
 /commons-e44e3f2e041a7ee84e32.js
   Cache-Control: public, max-age=31536000, immutable
@@ -31,7 +31,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-posts-01-graphs-and-penguins-index-mdx-007ef6cef5ff1377b19c.js
   Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-new-index-mdx-753e03a6b7c0c2bc62e3.js
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-new-index-mdx-e55aba96b25cfd7e3465.js
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-redirects-church-numbers-mdx-7598782fc844cc212628.js
   Cache-Control: public, max-age=31536000, immutable
@@ -45,7 +45,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tag-query-tsx-3492cd32294b413eded7.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-939f5d7b77feeb81efef.js
+/webpack-runtime-a4bf9efc08ffb9a241f0.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-881d3290a1a6a4328055.js
   Cache-Control: public, max-age=31536000, immutable
