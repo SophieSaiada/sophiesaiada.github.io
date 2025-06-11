@@ -1,6 +1,6 @@
 import katexReplaceWithTex from "./katex2tex";
 
-export default event => {
+const copyText = (event) => {
   const selection = window.getSelection();
   if (selection.isCollapsed) {
     return; // default action OK if selection is empty
@@ -23,3 +23,5 @@ export default event => {
   // Prevent normal copy handling.
   event.preventDefault();
 };
+
+export default copyText;

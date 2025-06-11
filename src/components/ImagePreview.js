@@ -1,7 +1,7 @@
 import React from "react";
 import "./ImagePreview.css";
 
-export default ({ src, alt, width, leftOffset, blur }) => (
+const ImagePreview = ({ src, alt, width, leftOffset, blur }) => (
   <a href={src} target="_blank" rel="noopener noreferrer">
     <div className="preview-image-container">
       <img
@@ -17,3 +17,5 @@ export default ({ src, alt, width, leftOffset, blur }) => (
     </div>
   </a>
 );
+
+export default ImagePreview;
