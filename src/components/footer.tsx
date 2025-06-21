@@ -19,7 +19,7 @@ const Footer = () => (
           Let's code a better world together.
         </h2>
         <CTA
-          to="/SophieSaiadaSeniorFullStackDeveloper.pdf"
+          to="mailto:contact@sophies.dev"
           icon={<Mail className="size-7" strokeWidth={1.75} />}
           text="Contact Me"
         />

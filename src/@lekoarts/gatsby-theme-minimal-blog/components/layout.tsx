@@ -65,7 +65,7 @@ const Layout = ({
           as="main"
           variant="layout.main"
           sx={{ ...CodeStyles }}
-          className={`${withoutContainer || "mt-[6rem]"} ${className}`}
+          className={`${withoutContainer || "!mt-[6rem]"} ${className}`}
         >
           {children}
         </Box>

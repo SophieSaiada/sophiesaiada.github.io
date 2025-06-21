@@ -56,7 +56,7 @@ const Links = ({ className }: { className: string }) => (
     </a>
     <a
       className="text-[0] text-tinted-text flex flex-row w-full items-center gap-2 no-underline"
-      href="mailto:ontact@sophies.dev"
+      href="mailto:contact@sophies.dev"
       title="Email"
     >
       <Mail className={iconClass} strokeWidth={1.75} />
