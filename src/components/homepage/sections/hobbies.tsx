@@ -1,6 +1,6 @@
 import React from "react";
 
-import ChipsSection, { BREAK_LINE } from "./ChipsSection";
+import ChipsSection, { BREAK_LINE } from "../chips-section";
 
 const Hobbies = () => (
   <ChipsSection

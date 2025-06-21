@@ -1,6 +1,6 @@
 import React from "react";
-import SpotlightCard from "./SpotlightCard";
-import { SectionTitle } from "./SectionTitle";
+import SpotlightCard from "../spotlight-card";
+import { SectionTitle } from "../section-title";
 
 const highlights = [
   {

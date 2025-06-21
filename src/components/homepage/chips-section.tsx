@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "./section-title";
 
 export const BREAK_LINE = Symbol();
 

@@ -1,6 +1,6 @@
 import React from "react";
-import TsParticlesAnimation from "../../../../components/background";
-import { CTA } from "./cta";
+import TsParticlesAnimation from "../../background";
+import { CTA } from "../cta";
 import { FileBadge } from "lucide-react";
 
 export const Hero = () => (

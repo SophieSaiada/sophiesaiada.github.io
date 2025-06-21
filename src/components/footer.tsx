@@ -1,10 +1,10 @@
 import React from "react";
 import { CTA } from "./homepage/cta";
 import { Mail } from "lucide-react";
-import { SectionTitle } from "./homepage/SectionTitle";
-import TsParticlesAnimation from "../../../components/background";
+import { SectionTitle } from "./homepage/section-title";
+import TsParticlesAnimation from "./background";
 
-const BottomCTA = () => (
+const Footer = () => (
   <section className="relative mt-16">
     <div className="z-0 absolute inset-0 overflow-hidden">
       <TsParticlesAnimation id="footer-particles" />
@@ -28,4 +28,4 @@ const BottomCTA = () => (
   </section>
 );
 
-export default BottomCTA;
+export default Footer;

@@ -8,7 +8,7 @@ import { MDXProvider } from "@mdx-js/react";
 import MdxComponents from "@lekoarts/gatsby-theme-minimal-blog/src/components/mdx-components";
 import CodeStyles from "@lekoarts/gatsby-theme-minimal-blog/src/styles/code";
 import MenuBar from "./MenuBar";
-import BottomCTA from "./BottomCTA";
+import Footer from "../../../components/footer";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -65,11 +65,11 @@ const Layout = ({
           as="main"
           variant="layout.main"
           sx={{ ...CodeStyles }}
-          className={className}
+          className={`${withoutContainer || "mt-[6rem]"} ${className}`}
         >
           {children}
         </Box>
-        <BottomCTA />
+        <Footer />
       </Wrapper>
     </MDXProvider>
   );

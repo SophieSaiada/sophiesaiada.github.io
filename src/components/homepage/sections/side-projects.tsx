@@ -4,9 +4,9 @@ import React, {
   RefAttributes
 } from "react";
 import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-minimal-blog-config";
-import { SectionTitle } from "./SectionTitle";
-import { CHIP_CLASS_NAME } from "./ChipsSection";
-import { SHINY_BORDER_CLASS_NAME } from "./Highlights";
+import { SectionTitle } from "../section-title";
+import { CHIP_CLASS_NAME } from "../chips-section";
+import { SHINY_BORDER_CLASS_NAME } from "./highlights";
 import {
   Github,
   Linkedin,

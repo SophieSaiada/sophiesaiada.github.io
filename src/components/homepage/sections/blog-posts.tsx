@@ -1,12 +1,12 @@
 import React from "react";
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "../section-title";
 import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-minimal-blog-config";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
-import { CHIP_CLASS_NAME } from "./ChipsSection";
-import { usePosts } from "../hooks/usePosts";
-import { SHINY_BORDER_CLASS_NAME } from "./Highlights";
+import { CHIP_CLASS_NAME } from "../chips-section";
+import { usePosts } from "../../../@lekoarts/gatsby-theme-minimal-blog/components/hooks/usePosts";
+import { SHINY_BORDER_CLASS_NAME } from "./highlights";
 
 const POSTS = [
   {
