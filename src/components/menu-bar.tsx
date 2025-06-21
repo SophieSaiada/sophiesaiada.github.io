@@ -15,9 +15,9 @@ const MenuBar = () => {
         to="/"
       >
         <span>
-          SOPHIE
+          SopHie
           <br />
-          SAIADA
+          Saiada
         </span>
       </Link>
       <button
