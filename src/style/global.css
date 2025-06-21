@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text-glow-xl {
+    text-shadow: 0px 0px 10px #ff30ff;
+  }
+  .box-glow-xl {
+    box-shadow: 0px 3px 20px rgba(255, 48, 255, 0.614);
+  }
+  .box-glow-xxl {
+    box-shadow: 0px 5px 26px rgba(255, 48, 255, 0.7);
+  }
+  .no-tap-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

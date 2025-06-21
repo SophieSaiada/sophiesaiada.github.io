@@ -1,18 +1,37 @@
 import style from "@lekoarts/gatsby-theme-minimal-blog/src/gatsby-plugin-theme-ui/index";
 import { merge } from "theme-ui";
 
-const secularOne = `'Sora', 'Secular One', sans-serif`;
-const assistant = `'Sora', 'Assistant', sans-serif`;
 const theme = merge(
-  { ...style, colors: { ...style.colors, modes: {} } },
+  {
+    ...style,
+    config: {
+      initialColorModeName: `dark`
+    },
+    colors: { ...style.colors, modes: {} }
+  },
   {
     fonts: {
-      heading: secularOne,
-      body: assistant
+      heading: `'Caveat', 'Assistant', sans-serif`,
+      body: `'Sora', 'Assistant', sans-serif`
     },
     colors: {
-      primary: "#9c27b0"
+      primary: "#9c27b0",
+      secondary: "#ffade4",
+      background: "#0A0A0A",
+      text: "#ffdbf3",
+      heading: "#ffade4",
+      "plain-backgroundColor": "#1e1019",
+      "plain-color": "#f4ddec",
+      "keyword-color": "#ffbead",
+      "function-color": "#ffadff",
+      "operator-color": "#958e8e",
+      "punctuation-color": "#958e8e",
+      "number-color": "#70c6d2",
+      "constant-color": "#70c6d2",
+      "comment-color": "#5e5e5a",
+      "string-color": "#f68dbb"
     },
+    background: "#0A0A0A",
     styles: {
       li: {
         pr: 3

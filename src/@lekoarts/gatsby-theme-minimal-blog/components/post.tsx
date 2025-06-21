@@ -50,6 +50,7 @@ const Post: React.FC<
           <span
             onCopy={copyHandler}
             dir={isRTL ? "rtl" : "ltr"}
+            className="mt-8"
             sx={{
               ".gatsby-resp-image-wrapper": {
                 margin: "auto !important",

@@ -5,7 +5,7 @@ import { useColorMode } from "theme-ui";
 const ColorModeToggle = () => {
   const [_colorMode, setColorMode] = useColorMode<"light" | "dark">();
   useEffect(() => {
-    setColorMode("light");
+    setColorMode("dark");
   }, []);
   return <Fragment />;
 };

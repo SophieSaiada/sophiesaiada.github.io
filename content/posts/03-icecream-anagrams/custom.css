@@ -1,7 +1,7 @@
 [data-taste] {
   padding: 0.1em 0.2em;
   border-radius: 0.25em;
-  color: var(--theme-ui-colors-text,#2d3748);
+  color: #2d3748;
   border: 1px solid #00000021;
 }
 
@@ -23,7 +23,6 @@
 [data-taste="בננה"] {
   background-color: #feec94;
 }
-
 
 .gatsby-highlight-code-line {
   background-color: #feb;
