@@ -30,7 +30,7 @@ export const Hero = () => (
         </p>
         <CTA
           to="/SophieSaiadaSeniorFullStackDeveloper.pdf"
-          icon={<FileBadge className="size-7" strokeWidth={1.5} />}
+          icon={<FileBadge className="size-6 lg:size-7" strokeWidth={1.5} />}
           text="Resume"
         />
       </div>

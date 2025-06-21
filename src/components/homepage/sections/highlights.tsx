@@ -70,10 +70,10 @@ const Highlights = () => (
             draggable={false}
           />
           <div className="w-full px-5 py-5 flex flex-col text-white-text items-start grow bg-[#610052] bg-center bg-[url('/images/highlight-bg.png')] bg-cover">
-            <h3 className="font-caveat m-0 text-[2.25rem] text-white-text leading-tight font-normal">
+            <h3 className="font-caveat m-0 text-[2.25rem] lg:text-[2.5rem] text-white-text leading-[0.9] font-normal">
               {h.title}
             </h3>
-            <h4 className="font-caveat m-0 text-[1.5rem] text-white-text leading-tight">
+            <h4 className="font-caveat m-0 mt-2 text-[1.5rem] text-white-text leading-tight">
               {h.years}
               {h.duration && (
                 <>

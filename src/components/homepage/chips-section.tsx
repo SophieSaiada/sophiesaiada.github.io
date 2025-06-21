@@ -4,7 +4,7 @@ import { SectionTitle } from "./section-title";
 export const BREAK_LINE = Symbol();
 
 export const CHIP_CLASS_NAME =
-  "px-4 py-2 rounded-full bg-[#2d0b2d] text-white-text font-recursive font-normal border border-solid border-[#460646] text-center flex items-center gap-3";
+  "px-4 py-2 rounded-full bg-[#2d0b2d] text-[0.85rem] lg:text-base text-white-text font-recursive font-normal border border-solid border-[#460646] text-center flex items-center gap-3";
 
 const ChipsSection = ({
   title,
