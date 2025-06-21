@@ -4,7 +4,7 @@ import { FileBadge } from "lucide-react";
 import CTA from "../../cta";
 
 export const Hero = () => (
-  <div className="h-svh min-h-[35rem] lg:max-h-[45rem] relative lg:mt-[6rem]">
+  <div className="h-svh min-h-[35rem] lg:max-h-[45rem] relative lg:mt-[6rem] text-white-text">
     <div className="z-0 absolute inset-0 overflow-hidden">
       <TsParticlesAnimation id="hero-particles" />
     </div>
@@ -17,20 +17,20 @@ export const Hero = () => (
       <div className="row-start-2" />
 
       <div className="row-start-3 mb-8 lg:mb-0 z-20 flex-0 flex flex-col items-center lg:items-start text-center lg:text-left lg:pt-4">
-        <h1 className="font-elder-magic m-0 font-normal text-glow-xl text-[2.25rem] sm:text-[2.75rem] md:text-[3.25rem] lg:text-[3.75rem]">
-          SopHie Saiada
+        <h1 className="font-elder-magic m-0 mb-1 md:mb-2 lg:mb-4 font-normal leading-none text-glow-xl text-[2.75rem] sm:text-[3.75rem] md:text-[4.5rem] lg:text-[5rem]">
+          Sophie Saiada
         </h1>
-        <h1 className="font-recursive m-0 -mt-2 lg:-mt-2 lg:mb-2 font-normal text-glow-xl text-[1.75rem] sm:text-[2.25rem] md:text-[2.5rem] lg:text-[3.125rem]">
+        <h1 className="font-elder-magic m-0 lg:-mt-2 sm:mb-1 md:mb-2 lg:mb-3 leading-none font-normal text-glow-xl text-[1.75rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem]">
           Senior Web Developer
         </h1>
-        <p className="font-caveat text-[1.5rem] sm:text-[2rem] md:text-[2.25rem] lg:text-[2.55rem] xl:text-[3rem] text-glow-xl m-0 leading-[2rem] sm:leading-[2.5rem] md:leading-[2.75rem] lg:leading-[3.5rem] xl:leading-[4rem] mt-2 lg:mt-0 mb-8">
+        <p className="font-recursive text-[1rem] sm:text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] text-glow-xl m-0 leading-relaxed mt-2 lg:m-0 mb-4 md:mb-6 lg:mb-8">
           Crafting magical apps for 6 years
           <br />
           Based in Israel, nice on Slack and in person
         </p>
         <CTA
           to="/SophieSaiadaSeniorFullStackDeveloper.pdf"
-          icon={<FileBadge className="size-7" strokeWidth={1.75} />}
+          icon={<FileBadge className="size-7" strokeWidth={1.5} />}
           text="Resume"
         />
       </div>

@@ -15,7 +15,7 @@ import Layout from "./layout";
 const Homepage = (_: MBHomepageProps) => (
   <Layout withoutContainer>
     <Hero />
-    <div className="max-w-screen-xl px-4 mx-auto text-tinted-text">
+    <div className="max-w-screen-xl px-4 mx-auto">
       <Highlights />
       <Technologies />
       <AdditionalValues />

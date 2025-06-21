@@ -11,9 +11,16 @@ module.exports = {
         "white-text": "#fbdff2"
       },
       fontFamily: {
-        "elder-magic": ["Elder Magic", ...defaultTheme.fontFamily.sans],
-        caveat: ["Caveat", "Assistant", ...defaultTheme.fontFamily.sans],
-        recursive: ["Recursive", "Assistant", ...defaultTheme.fontFamily.serif]
+        "elder-magic": [
+          "Unicorns are Awesome",
+          ...defaultTheme.fontFamily.sans
+        ],
+        caveat: [
+          "Unicorns are Awesome",
+          "Assistant",
+          ...defaultTheme.fontFamily.sans
+        ],
+        recursive: ["Montserrat", "Assistant", ...defaultTheme.fontFamily.serif]
       },
       textShadow: {
         dino: "0px 0px 10px #FF30FF"

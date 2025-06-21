@@ -15,12 +15,12 @@ const Footer = () => (
 
     <div className="max-w-screen-xl px-4 mx-auto">
       <div className="w-full max-lg:flex-col max-lg:text-center text-left gap-4 max-lg:gap-6 max-lg:px-6 flex items-center justify-between py-16 pb-16 relative z-30">
-        <h2 className="font-caveat text-[3rem] text-tinted-text tracking-[0.02em] leading-tight m-0 text-center text-glow-xl">
+        <h2 className="font-caveat font-normal text-[3rem] text-white-text tracking-[0.02em] leading-tight m-0 text-center text-glow-xl">
           Let's code a better world together.
         </h2>
         <CTA
           to="mailto:contact@sophies.dev"
-          icon={<Mail className="size-7" strokeWidth={1.75} />}
+          icon={<Mail className="size-7" strokeWidth={1.5} />}
           text="Contact Me"
         />
       </div>

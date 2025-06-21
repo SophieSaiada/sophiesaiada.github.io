@@ -11,8 +11,8 @@ const theme = merge(
   },
   {
     fonts: {
-      heading: `'Caveat', 'Assistant', sans-serif`,
-      body: `'Sora', 'Assistant', sans-serif`
+      heading: `'Unicorns are Awesome', 'Assistant', sans-serif`,
+      body: `'Montserrat', 'Assistant', sans-serif`
     },
     colors: {
       primary: "#9c27b0",
@@ -40,7 +40,7 @@ const theme = merge(
     text: {
       hero: {
         fontSize: [5, 7, 7],
-        fontFamily: "Sora",
+        fontFamily: "Montserrat",
         fontWeight: 700,
         letterSpacing: "-0.06em"
       }

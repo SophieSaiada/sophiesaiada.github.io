@@ -11,11 +11,11 @@ const MenuBar = () => {
   return (
     <nav className="w-full flex-wrap flex items-center justify-between px-8 py-3 bg-background/50 backdrop-blur-md z-50 fixed top-0 left-0 shadow-lg shadow-background/30">
       <Link
-        className="font-elder-magic text-[2rem] leading-[2.2rem] text-tinted-text drop-shadow-[0_0_12px_rgba(236,72,255,0.9)] no-underline"
+        className="font-elder-magic text-[2.45rem] leading-[2.2rem] text-tinted-text drop-shadow-[0_0_12px_rgba(236,72,255,0.9)] no-underline"
         to="/"
       >
         <span>
-          SopHie
+          Sophie
           <br />
           Saiada
         </span>

@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 
 export const SectionTitle = ({ children }: PropsWithChildren) => (
-  <h2 className="font-caveat text-[3rem] text-tinted-text mt-16 mb-10 tracking-[0.02em] text-center text-glow-xl">
+  <h2 className="font-caveat text-[3.5rem] text-white-text mt-16 mb-10 tracking-[0.02em] text-center text-glow-xl font-normal">
     {children}
   </h2>
 );
