@@ -13,8 +13,8 @@ module.exports = {
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://sophies.dev`,
     // Used for SEO
-    siteDescription: `Sophie Saiada, Full Stack (web & mobile) Developer`,
-    keywords: `Sophie Saiada,סופי ציאדה, מפתחת,מפתח,פול סטאק,מתכנת,מתכנתת,Senior Full Stack Developer,Senior Full-Stack Developer,Full-Stack Senior Developer,תכנות,Full Stack Developer,Full Stack,Full-Stack,Developer,Mobile,Web,React,ReactJS,iOS,Android,Kotlin,Python,Swift,Software Engineer`,
+    siteDescription: `Sophie Saiada, Senior Full-Stack (web & mobile) Developer`,
+    keywords: `Sophie Saiada,סופי ציאדה, מפתחת,מפתח,פול סטאק,מתכנת,מתכנתת,Senior Full Stack Developer,Senior Full Stack Web Developer,Senior Full-Stack Developer,Full-Stack Senior Developer,תכנות,Full Stack Developer,Full Stack,Full-Stack,Developer,Mobile,Web,React,ReactJS,iOS,Android,Kotlin,Python,Swift,Software Engineer`,
     // Will be set on the <html /> tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
