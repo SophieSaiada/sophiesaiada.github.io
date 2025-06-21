@@ -1,11 +1,31 @@
 import { graphql, useStaticQuery } from "gatsby";
-import HomepagePostWithBanner from "../HomepagePostWithBanner";
+import { FluidObject } from "gatsby-image";
 
 export { Head } from "@lekoarts/gatsby-theme-minimal-blog/src/components/homepage";
 
 export const usePosts = () => {
   const data = useStaticQuery<{
-    allPost: { nodes: (HomepagePostWithBanner & { background: string })[] };
+    allPost: {
+      nodes: {
+        id: string;
+        slug: string;
+        title: string;
+        date: string;
+        excerpt: string;
+        description: string;
+        timeToRead?: number;
+        contentFilePath: string;
+        banner: {
+          childImageSharp: {
+            fluid: FluidObject;
+          };
+        };
+        tags?: {
+          name: string;
+          slug: string;
+        }[];
+      }[];
+    };
   }>(graphql`
     query {
       allPost(sort: { date: DESC }, limit: 8) {

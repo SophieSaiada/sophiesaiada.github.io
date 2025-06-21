@@ -7,7 +7,7 @@ import { Box, Container, jsx, get, useColorMode } from "theme-ui";
 import { MDXProvider } from "@mdx-js/react";
 import MdxComponents from "@lekoarts/gatsby-theme-minimal-blog/src/components/mdx-components";
 import CodeStyles from "@lekoarts/gatsby-theme-minimal-blog/src/styles/code";
-import MenuBar from "./MenuBar";
+import MenuBar from "../../../components/menu-bar";
 import Footer from "../../../components/footer";
 
 type LayoutProps = {

@@ -1,8 +1,8 @@
 import React from "react";
-import { CTA } from "./homepage/cta";
 import { Mail } from "lucide-react";
 import { SectionTitle } from "./homepage/section-title";
 import TsParticlesAnimation from "./background";
+import CTA from "./cta";
 
 const Footer = () => (
   <section className="relative mt-16">

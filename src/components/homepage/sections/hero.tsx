@@ -1,7 +1,7 @@
 import React from "react";
 import TsParticlesAnimation from "../../background";
-import { CTA } from "../cta";
 import { FileBadge } from "lucide-react";
+import CTA from "../../cta";
 
 export const Hero = () => (
   <div className="h-svh min-h-[35rem] lg:max-h-[45rem] relative lg:mt-[6rem]">

@@ -22,3 +22,5 @@ export const CTA = ({
     {text}
   </Box>
 );
+
+export default CTA;
