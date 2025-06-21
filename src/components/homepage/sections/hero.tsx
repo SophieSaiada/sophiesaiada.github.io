@@ -12,7 +12,7 @@ export const Hero = () => (
     <div className="h-full top-0 from-transparent via-background via-75% to-background bg-gradient-to-t z-10 w-full absolute left-0" />
     <div className="h-10 bottom-0 hidden lg:block from-transparent to-background bg-gradient-to-b z-10 w-full absolute left-0" />
 
-    <div className="absolute px-4 max-w-[70rem] mx-auto inset-0 lg:flex max-lg:grid max-lg:grid-rows-[6rem_minmax(1rem,1fr)__max-content_max-content_minmax(3rem,1fr)] lg:flex-row items-center justify-center lg:justify-between w-full">
+    <div className="absolute px-4 max-w-[74rem] mx-auto inset-0 lg:flex max-lg:grid max-lg:grid-rows-[6rem_minmax(1rem,1fr)__max-content_max-content_minmax(3rem,1fr)] lg:flex-row items-center justify-center lg:justify-between w-full">
       <div className="row-start-1" />
       <div className="row-start-2" />
 
@@ -23,14 +23,14 @@ export const Hero = () => (
         <h1 className="font-recursive m-0 -mt-2 lg:-mt-2 lg:mb-2 font-normal text-glow-xl text-[1.75rem] sm:text-[2.25rem] md:text-[2.5rem] lg:text-[3.125rem]">
           Senior Web Developer
         </h1>
-        <p className="font-caveat text-[1.5rem] sm:text-[2rem] md:text-[2.25rem] lg:text-[2.75rem] xl:text-[3rem] text-glow-xl m-0 leading-[2rem] sm:leading-[2.5rem] md:leading-[2.75rem] lg:leading-[3.5rem] xl:leading-[4rem] mt-2 lg:mt-0 mb-8">
+        <p className="font-caveat text-[1.5rem] sm:text-[2rem] md:text-[2.25rem] lg:text-[2.55rem] xl:text-[3rem] text-glow-xl m-0 leading-[2rem] sm:leading-[2.5rem] md:leading-[2.75rem] lg:leading-[3.5rem] xl:leading-[4rem] mt-2 lg:mt-0 mb-8">
           Crafting{" "}
           <span className="font-elder-magic text-[1.25rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2.5rem]">
             magical
           </span>{" "}
           apps for 6 years
           <br />
-          Based in Israel, and overall a nice person
+          Based in Israel, nice on Slack and in person
         </p>
         <CTA
           to="/SophieSaiadaSeniorFullStackDeveloper.pdf"
