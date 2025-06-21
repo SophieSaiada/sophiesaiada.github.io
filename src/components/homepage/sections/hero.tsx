@@ -24,11 +24,7 @@ export const Hero = () => (
           Senior Web Developer
         </h1>
         <p className="font-caveat text-[1.5rem] sm:text-[2rem] md:text-[2.25rem] lg:text-[2.55rem] xl:text-[3rem] text-glow-xl m-0 leading-[2rem] sm:leading-[2.5rem] md:leading-[2.75rem] lg:leading-[3.5rem] xl:leading-[4rem] mt-2 lg:mt-0 mb-8">
-          Crafting{" "}
-          <span className="font-elder-magic text-[1.25rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2.5rem]">
-            magical
-          </span>{" "}
-          apps for 6 years
+          Crafting magical apps for 6 years
           <br />
           Based in Israel, nice on Slack and in person
         </p>
