@@ -31,7 +31,7 @@ const ChipsSection = ({
         ) : (
           <div
             key={value.name}
-            className={`${CHIP_CLASS_NAME} ${value.bold && "font-bold"}`}
+            className={`${CHIP_CLASS_NAME} ${value.bold && "!font-bold"}`}
           >
             {value.icon && (
               <div className="relative size-4 group">
