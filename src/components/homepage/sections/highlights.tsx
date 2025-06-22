@@ -91,7 +91,7 @@ const Highlights = () => (
                   className="flex flex-row items-start indent-0 mb-2 last:mb-0"
                 >
                   <span>{emoji}</span>
-                  <span className="ml-3">{text}</span>
+                  <span className="ml-2 lg:ml-3">{text}</span>
                 </li>
               ))}
             </ul>
