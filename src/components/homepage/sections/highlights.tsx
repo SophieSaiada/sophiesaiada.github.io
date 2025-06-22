@@ -50,7 +50,7 @@ const highlights = [
 ];
 
 export const SHINY_BORDER_CLASS_NAME =
-  "after:border after:border-solid after:border-white/5 after:content-[''] after:absolute after:inset-px after:rounded-2xl after:z-40 after:pointer-events-none";
+  "after:border after:border-solid after:border-white/5 after:content-[''] after:absolute after:inset-[0] after:rounded-xl after:z-40 after:pointer-events-none";
 
 const Highlights = () => (
   <section>
@@ -70,10 +70,10 @@ const Highlights = () => (
             draggable={false}
           />
           <div className="w-full px-5 py-5 flex flex-col text-white-text items-start grow bg-[#610052] bg-center bg-[url('/images/highlight-bg.png')] bg-cover">
-            <h3 className="font-caveat m-0 text-[2.25rem] lg:text-[2.5rem] text-white-text leading-[0.9] font-normal">
+            <h3 className="font-caveat m-0 text-[2.25rem] lg:text-[2.25rem] text-white-text leading-[0.9] font-normal">
               {h.title}
             </h3>
-            <h4 className="font-caveat m-0 mt-2 text-[1.5rem] text-white-text leading-tight">
+            <h4 className="font-caveat m-0 mt-2 text-[1.25rem] text-white-text leading-tight">
               {h.years}
               {h.duration && (
                 <>
@@ -84,7 +84,7 @@ const Highlights = () => (
                 </>
               )}
             </h4>
-            <ul className="font-recursive text-base text-white-text whitespace-pre-line leading-[1.6] list-none p-0 pl-1">
+            <ul className="font-recursive text-[0.85rem] lg:text-base text-white-text whitespace-pre-line leading-[1.6] list-none p-0 pl-1">
               {h.bulletPoints.map(({ emoji, text }) => (
                 <li
                   key={text}

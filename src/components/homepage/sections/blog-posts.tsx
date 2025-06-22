@@ -57,7 +57,9 @@ const BlogPosts = () => {
                 {title}
               </h3>
 
-              <div className="text-base font-recursive mb-2">{date}</div>
+              <div className="text-[0.85rem] lg:text-base font-recursive mb-2">
+                {date}
+              </div>
 
               <div className="flex flex-wrap gap-2 mt-auto">
                 {(tags ?? []).map((tag) => (

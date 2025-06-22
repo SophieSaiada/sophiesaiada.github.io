@@ -7,9 +7,8 @@ const AdditionalValues = () => (
     title="Additional Values"
     values={[
       { name: "Independent", icon: { type: "emoji", emoji: "💪" } },
-      { name: "Proactive" },
+      { name: "Proactive", icon: { type: "emoji", emoji: "🤓" } },
       { name: "Eye for design + UX", icon: { type: "emoji", emoji: "🎨" } },
-      { name: "Draw intuitive diagrams" },
       BREAK_LINE,
       {
         name: "Domain knowledge on Solar",
@@ -24,7 +23,10 @@ const AdditionalValues = () => (
       { name: "Hebrew (native)", icon: { type: "emoji", emoji: "🇮🇱" } },
       BREAK_LINE,
       { name: "+10 in Diversity", icon: { type: "emoji", emoji: "🏳️‍🌈" } },
-      { name: "Good at picking places for lunch" }
+      {
+        name: "Good at picking places for lunch",
+        icon: { type: "emoji", emoji: "🍜" }
+      }
     ]}
   />
 );

@@ -8,23 +8,28 @@ const Technologies = () => (
     values={[
       {
         name: "React",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/reactjs.svg" }
       },
       {
         name: "TypeScript",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/typescript.svg" }
       },
       {
         name: "Python",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/python.svg" }
       },
       {
         name: "JavaScript",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/javascript.svg" }
       },
       BREAK_LINE,
       {
-        name: "AWS (API Gateway, Lambda, SQS)",
+        name: "AWS (API\xa0Gateway,\xa0Lambda,\xa0SQS)",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/aws.svg" }
       },
       {
@@ -35,6 +40,7 @@ const Technologies = () => (
       { name: "OpenAPI" },
       {
         name: "MongoDB",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/mongodb.svg" }
       },
       BREAK_LINE,
@@ -50,10 +56,12 @@ const Technologies = () => (
       BREAK_LINE,
       {
         name: "Kotlin",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/kotlin.svg" }
       },
       {
         name: "Swift",
+        bold: true,
         icon: { type: "image", src: "/icons/techs/swift.svg" }
       },
       {

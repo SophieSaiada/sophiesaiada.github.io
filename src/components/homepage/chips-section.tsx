@@ -14,6 +14,7 @@ const ChipsSection = ({
   values: (
     | {
         name: string;
+        bold?: boolean;
         icon?:
           | { type: "image"; src: string }
           | { type: "emoji"; emoji: string };
@@ -26,9 +27,12 @@ const ChipsSection = ({
     <div className="flex flex-wrap gap-y-2.5 gap-x-2 lg:gap-y-3 lg:gap-x-4 -mt-2 justify-center">
       {values.map((value, i) =>
         value === BREAK_LINE ? (
-          <div key={i} className="basis-full h-0" />
+          <div key={i} className="basis-full max-md:h-3" />
         ) : (
-          <div key={value.name} className={CHIP_CLASS_NAME}>
+          <div
+            key={value.name}
+            className={`${CHIP_CLASS_NAME} ${value.bold && "font-bold"}`}
+          >
             {value.icon && (
               <div className="relative size-4 group">
                 {value.icon?.type === "emoji" ? (

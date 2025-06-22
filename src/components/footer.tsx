@@ -20,7 +20,7 @@ const Footer = () => (
         </h2>
         <CTA
           to="mailto:contact@sophies.dev"
-          icon={<Mail className="size-6 lg:size-7" strokeWidth={1.5} />}
+          icon={<Mail className="size-6 lg:size-7" strokeWidth={1.75} />}
           text="Contact Me"
         />
       </div>
