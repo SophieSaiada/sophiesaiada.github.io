@@ -164,7 +164,7 @@ const SideProjects = () => {
                 {name}
               </h3>
 
-              <div className="text-[0.85rem] lg:text-base font-recursive leading-8 mb-4 mt-1 [&>a]:text-tinted-text [&>a]:no-underline [&>a:hover]:text-white-text [&>a:hover]:underline [&>a:focus]:text-white-text [&>a:focus]:underline">
+              <div className="text-[0.85rem] lg:text-base font-recursive leading-relaxed mb-4 mt-1 [&>a]:text-tinted-text [&>a]:no-underline [&>a:hover]:text-white-text [&>a:hover]:underline [&>a:focus]:text-white-text [&>a:focus]:underline">
                 {description}
               </div>
 

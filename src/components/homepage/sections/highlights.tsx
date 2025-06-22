@@ -84,7 +84,7 @@ const Highlights = () => (
                 </>
               )}
             </h4>
-            <ul className="font-recursive text-[0.85rem] lg:text-base text-white-text whitespace-pre-line leading-[1.6] list-none p-0 pl-1">
+            <ul className="font-recursive text-[0.85rem] lg:text-base text-white-text whitespace-pre-line leading-relaxed list-none p-0 pl-1">
               {h.bulletPoints.map(({ emoji, text }) => (
                 <li
                   key={text}
