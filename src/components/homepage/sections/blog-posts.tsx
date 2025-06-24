@@ -38,8 +38,8 @@ const BlogPosts = () => {
           ...posts.find((post) => post.slug === slug)!,
           background
         })).map(({ slug, background, banner, tags, title, date }) => (
-          <a
-            href={slug}
+          <Link
+            to={slug}
             key={slug}
             className={`no-underline text-white relative rounded-2xl overflow-hidden px-0 py-0 flex flex-col items-start z-10 flex-1 ${SHINY_BORDER_CLASS_NAME}`}
           >
@@ -63,17 +63,17 @@ const BlogPosts = () => {
 
               <div className="flex flex-wrap gap-2 mt-auto">
                 {(tags ?? []).map((tag) => (
-                  <Link
+                  <div
                     key={tag.slug}
-                    to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}
-                    className={`${CHIP_CLASS_NAME} bg-black/30 border-black/60 text-white no-underline hover:bg-black/50`}
+                    // to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}
+                    className={`${CHIP_CLASS_NAME} bg-black/30 border-black/60 text-white no-underline`}
                   >
                     {tag.name}
-                  </Link>
+                  </div>
                 ))}
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
