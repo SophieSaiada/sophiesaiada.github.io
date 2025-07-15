@@ -24,13 +24,14 @@ const highlights = [
     bulletPoints: [
       { emoji: "🪇", text: "From Junior to Señor(ita)" },
       { emoji: "🫡", text: "Right-hand to the CTO" },
+      { emoji: "👩‍🏫", text: "Onboarded & mentored developers" },
       {
         emoji: "👷‍♀️",
-        text: "Sole developer for a few months (I'm pretty loyal)"
+        text: "Sole developer for a few months"
       },
       { emoji: "💼", text: "Worked with top financial institutions" }
     ],
-    quotes: ["Have the to get sh*t done quickly", "Brilliant"]
+    quotes: ["Knows how the to get sh*t done quickly", "Brilliant"]
   },
   {
     imageKey: "rhino",
@@ -46,6 +47,7 @@ const highlights = [
         emoji: "🧱",
         text: "Managed integrations with data\xa0sources and financiers"
       },
+      { emoji: "🦉", text: "Senior from the first moment" },
       { emoji: "🫶", text: "Learned to be a team player" }
     ],
     quotes: ["My best recruitment ever"]
@@ -123,7 +125,7 @@ const Highlights = () => {
                 {h.bulletPoints.map(({ emoji, text }) => (
                   <li
                     key={text}
-                    className="flex flex-row items-start indent-0 mb-2 last:mb-0"
+                    className="flex flex-row items-start indent-0 mb-2.5 last:mb-0"
                   >
                     <span>{emoji}</span>
                     <span className="ml-2 lg:ml-3">{text}</span>
