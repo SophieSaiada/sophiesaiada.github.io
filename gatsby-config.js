@@ -92,6 +92,14 @@ module.exports = {
         trackingIds: [process.env.GOOGLE_ANALYTICS_ID]
       }
     },
+    {
+      resolve: "gatsby-plugin-hotjar",
+      options: {
+        includeInDevelopment: true,
+        id: process.env.HOTJAR_ID,
+        sv: process.env.HOTJAR_SNIPPET_VERSION
+      }
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
