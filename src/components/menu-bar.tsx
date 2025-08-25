@@ -46,7 +46,7 @@ const Links = ({ className }: { className: string }) => (
   <div className={`flex gap-4 ${className}`}>
     <a
       className="text-[0] text-tinted-text flex flex-row w-full items-center gap-2 no-underline"
-      href="/SophieSaiadaSeniorFullStackDeveloper.pdf"
+      href="/Sophie Saiada, Senior Full Stack Developer.pdf"
       target="_blank"
       rel="noopener noreferrer"
       title="Resume"

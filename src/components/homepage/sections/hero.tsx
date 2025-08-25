@@ -46,7 +46,7 @@ export const Hero = () => {
             Based in Israel, nice on Slack and in person
           </p>
           <CTA
-            to="/SophieSaiadaSeniorFullStackDeveloper.pdf"
+            to="/Sophie Saiada, Senior Full Stack Developer.pdf"
             icon={<FileBadge className="size-6 lg:size-7" strokeWidth={1.75} />}
             text="Resume"
           />
