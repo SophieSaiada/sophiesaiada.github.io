@@ -9,9 +9,9 @@
   Cache-Control: public, max-age=31536000, immutable
 /framework-55b26b3e95fd350cdad5.js
   Cache-Control: public, max-age=31536000, immutable
-/commons-3b1a403e6f2bc8ae7e9a.js
+/commons-a3d155a10618a38847de.js
   Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx-d8a30935d3ce60b7232f.js
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx-cad46dcbc15f0277052b.js
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-blog-query-tsx-27f222d6f09f604727c3.js
   Cache-Control: public, max-age=31536000, immutable
@@ -41,13 +41,11 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-contact-index-mdx-d195eed1d73ad2ab8891.js
   Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-users-sophie-repos-sophiasaiada-github-io-content-pages-about-index-mdx-5314d202984138f6b9cc.js
-  Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tag-query-tsx-d2d66c9e56abe8648a55.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-ed8f1b94a10325812730.js
+/webpack-runtime-0633b0931ab48abc455e.js
   Cache-Control: public, max-age=31536000, immutable
-/app-e3087aabf7871f50748b.js
+/app-879e24538cced871258a.js
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable
