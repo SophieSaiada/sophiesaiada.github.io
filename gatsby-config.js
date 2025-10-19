@@ -59,7 +59,7 @@ module.exports = {
         externalLinks: [
           {
             name: `GitHub`,
-            url: `https://github.com/SophiaSaiada/`
+            url: `https://github.com/SophieSaiada/`
           },
           {
             name: `LinkedIn`,

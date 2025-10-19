@@ -54,7 +54,7 @@ const PROJECTS: {
       {
         Icon: Github,
         name: "Code",
-        url: "https://github.com/SophiaSaiada/Godel"
+        url: "https://github.com/SophieSaiada/Godel"
       },
       {
         Icon: Presentation,
@@ -82,7 +82,7 @@ const PROJECTS: {
       {
         Icon: Github,
         name: "Code",
-        url: "https://github.com/SophiaSaiada/react-excel"
+        url: "https://github.com/SophieSaiada/react-excel"
       },
 
       {
@@ -124,7 +124,7 @@ const PROJECTS: {
       {
         Icon: Github,
         name: "Code",
-        url: "https://github.com/SophiaSaiada/vue-conversational-form"
+        url: "https://github.com/SophieSaiada/vue-conversational-form"
       },
 
       {

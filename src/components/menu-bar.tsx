@@ -64,7 +64,7 @@ const Links = ({ className }: { className: string }) => (
     </a>
     <a
       className="text-[0] text-tinted-text flex flex-row w-full items-center gap-2 no-underline"
-      href="https://github.com/SophiaSaiada"
+      href="https://github.com/SophieSaiada"
       target="_blank"
       rel="noopener noreferrer"
       title="GitHub"

@@ -57,7 +57,7 @@ But it isn't going to stop us from doing so, as it will help us understand how t
 We are going to model our encoding in Haskell, which is an excellent language for this purpose since functions are primitive types in it, and it is straightforward to use it for writing functions which operate on functions.  
 Let's create a new type, named `CNumber` to hold a Church function. It's not actually a new type, but a wrapper for a higher‐order function that receives two parameters: a function which maps value from $T$ to a value from $T$, and a value of $T$. This $T$ can be any type, so $T$ is a generic parameter (or a type parameter) of this wrapped function. This is the way to write that in Haskell:
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L1-L5
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L1-L5
 {-# LANGUAGE RankNTypes #-}
 newtype CNumber = Nr (forall t. (t -> t) -> t -> t)
 ```
@@ -67,7 +67,7 @@ I will remind you that in Haskell, the type `a -> b -> c` represents a function 
 The type we have created above, `CNumber`, is a container for a Church function. Please note that it doesn’t mean that every value of type `CNumber` is a Church function; it merely means that the container will match every HOF that receives a function and a value and returns a value.  
 Let's define $C_0$, $C_1$ and $C_2$:
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L7-L10
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L7-L10
 zero = Nr (\ f x -> x )
 one = Nr (\ f x -> f x )
 two = Nr (\ f x -> f (f x) )
@@ -76,7 +76,7 @@ two = Nr (\ f x -> f (f x) )
 As we said earlier, $C_0$, or `zero`, doesn’t apply `f` to `x` at all, and returns the $x$. $C_1$, or `one` returns the result of applying `f` to `x` once, and `two` returns the result of applying `f` to `x` twice in chain.  
 Assuming we have a `CNumber` that is guaranteed to hold a Church function, how can we recover the natural number it represents? We've already figured that out earlier, let's write it in Haskell:
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L12-L13
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L12-L13
 eval :: CNumber -> Int
 eval (Nr n) = n (+1) 0
 ```
@@ -87,7 +87,7 @@ Now we'll define the addition function,
 but before we do that, let's define a simpler function, named `succ`, that will help us implement the `add` function.
 `succ` increases any `CNumber` by `one`. I.e., `succ zero` returns `one` (the `CNumber` that represents $1$), `succ one` returns `two`, and so on.
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L15-L16
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L15-L16
 succ :: CNumber -> CNumber
 succ (Nr a) = Nr (\ f x -> f (a f x) )
 ```
@@ -98,7 +98,7 @@ The new function is going to use `a` (the function that the given `CNumber` hold
 An aside note: if you want this code to compile, you should replace `import Prelude` – which usually appears on the top of the code – with `import Prelude hiding (succ)`, so the built-in function named `succ` doesn't collide with ours.  
 Now, it will be much easier to define addition! We want a function named `add` that receives two values of type `CNumber` and returns a `CNumber` that represents the addition of the Church functions that the parameters hold.
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L19
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L19
 add :: CNumber -> CNumber -> CNumber
 add (Nr a) (Nr b) = Nr (\ f x -> a f (b f x))
 ```
@@ -107,14 +107,14 @@ We assume that `a` and `b` are Church functions that represents $n$ and $m$, res
 
 But we can do better! We have the function `a`, which knows to apply a certain function $n$ times. Let's use it more smartly. We can apply `succ` to `Nr b` (the `CNumber` that holds a Church function that represents $m$) $n$ times, and so, we will get the `CNumber` that holds a Church function that represents $n+m$.
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L20
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L20
 add :: CNumber -> CNumber -> CNumber
 add (Nr a) (Nr b) = a succ (Nr b)
 ```
 
 Yet there is an even a shorter way to write it, using partial applying:
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L21
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L18-L21
 add :: CNumber -> CNumber -> CNumber
 add (Nr a) = a succ
 ```
@@ -124,7 +124,7 @@ However, we aren’t trying to make our code shorter, but readable and simpler. 
 All we have left to do is to define the multiplication function! Note that it's a great exercise, and in my honest opinion, it is worthwhile for you to solve it by yourself. Of course, if you prefer, you can go on and read my solution 🙃  
 We want to use `a`, in the same way we used it earlier, for calculating the result of the product of `Nr a` and `Nr b`.
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L23-L25
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L23-L25
 mult :: CNumber -> CNumber -> CNumber
 mult (Nr a) (Nr b) = a (add (Nr b)) zero
 ```
@@ -133,7 +133,7 @@ Again, we assume that `a` and `b` are Church functions that represents $n$ and $
 
 In the same way we can implement a power of Church functions!
 
-```hs:gist=SophiaSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L27-L29
+```hs:gist=SophieSaiada/4bcdc401767be16c95d3f17c8daef0e1#file-churchnumbers-hs-L27-L29
 pow :: CNumber -> CNumber -> CNumber
 pow (Nr a) (Nr b) = b (mult a) one
 ```

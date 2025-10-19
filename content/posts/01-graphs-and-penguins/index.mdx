@@ -91,7 +91,7 @@ $$
 לכל צומת בגרף המקורי, ולכל תת קבוצה של צמתי פינגווינים, אנחנו מגדירים צומת בגרף החדש.  
 נתרגם את זה לקוד:
 
-```kotlin:github=SophiaSaiada/Post01GraphAndPenguins/blob/master/src/main/kotlin/Solver.kt#L40-L48
+```kotlin:github=SophieSaiada/Post01GraphAndPenguins/blob/master/src/main/kotlin/Solver.kt#L40-L48
 private fun buildAdvancedGraph(original: Graph): Graph {
     val penguins = original.vertices.filter(::isPenguin)
     val subsets = penguins.toSet().subsets()
@@ -145,7 +145,7 @@ $$
 סימן האיחוד הגדול מגדיר איחוד בין מספר משתנה של קבוצות, במקרה הזה, עבור כל תת-קבוצה L של $\{P1, … ,Pn\}$ נוסיף קבוצה (שמוגדרת כאיחוד של תתי-הסעיפים) לאיחוד הגדול. ליד כל חלק בהגדרה הפרומלית כתוב מספר הסעיף שמקביל לו בהסבר למעלה.
 
 נתרגם את זה לקוד:
-```kotlin:github=SophiaSaiada/Post01GraphAndPenguins/blob/master/src/main/kotlin/Solver.kt#L54-L76
+```kotlin:github=SophieSaiada/Post01GraphAndPenguins/blob/master/src/main/kotlin/Solver.kt#L54-L76
 val edges =
     original.edges.flatMap { (i, j, weight) ->
         subsets.mapNotNull { subset ->
@@ -187,7 +187,7 @@ val edges =
 גודל הקבוצה הוא מספר הפינגווינים הגדול ביותר שנוכל להציל במסגרת הזמן שיש לנו.
 
 זה נראה ככה בקוד:
-```kotlin:github=SophiaSaiada/Post01GraphAndPenguins/blob/master/src/main/kotlin/Solver.kt#L12-L33
+```kotlin:github=SophieSaiada/Post01GraphAndPenguins/blob/master/src/main/kotlin/Solver.kt#L12-L33
 buildAdvancedGraph(graph).let { advancedGraph ->
     val startNode = advancedGraph.vertices.find {
         it == AdvancedVertex(SimpleVertex("M"), emptySet())
