@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksophia_saiada=self.webpackChunksophia_saiada||[]).push([[720],{5480:function(e,a,n){n.r(a),n.d(a,{Head:function(){return r.F},default:function(){return c}});var t=n(7294),u=n(4079),r=n(2657);function c(e){return t.createElement(r.Z,e,t.createElement(u.default,e))}r.Z}}]);
+//# sourceMappingURL=component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-content-file-path-users-sophie-repos-sophiesaiada-github-io-content-posts-02-church-numbers-index-mdx-a2968422c6bea95bd79a.js.map
