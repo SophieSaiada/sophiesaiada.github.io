@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import "../../../style/main.css";
-import "../../../style/cta-button.scss";
 import * as React from "react";
 import { Global } from "@emotion/react";
 import { Box, Container, jsx, get, useColorMode } from "theme-ui";
@@ -19,7 +18,7 @@ type LayoutProps = {
 const Layout = ({
   children,
   withoutContainer,
-  className = ``
+  className = ``,
 }: LayoutProps) => {
   const [_colorMode, setColorMode] = useColorMode<"light" | "dark">();
   React.useEffect(() => {
@@ -33,29 +32,29 @@ const Layout = ({
       <Global
         styles={(t) => ({
           "*": {
-            boxSizing: `inherit`
+            boxSizing: `inherit`,
           },
           html: {
-            WebkitTextSizeAdjust: `100%`
+            WebkitTextSizeAdjust: `100%`,
           },
           img: {
-            borderStyle: `none`
+            borderStyle: `none`,
           },
           pre: {
             fontFamily: `monospace`,
-            fontSize: `1em`
+            fontSize: `1em`,
           },
           "[hidden]": {
-            display: `none`
+            display: `none`,
           },
           "::selection": {
             backgroundColor: get(t, `colors.text`),
-            color: get(t, `colors.background`)
+            color: get(t, `colors.background`),
           },
           a: {
             transition: `all 0.3s ease-in-out`,
-            color: `text`
-          }
+            color: `text`,
+          },
         })}
       />
       <MenuBar />
